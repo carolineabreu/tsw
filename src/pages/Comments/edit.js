@@ -19,7 +19,7 @@ export function EditPage() {
     async function fetchComments() {
       try {
         const response = await axios.get(
-          `https://ironrest.herokuapp.com/..../${id}`
+          `https://ironrest.herokuapp.com/tswcomments/${id}`
         );
 
         delete response.data._id;
@@ -40,7 +40,7 @@ export function EditPage() {
 
     try {
       const response = await axios.put(
-        `https://ironrest.herokuapp.com/..../${id}`,
+        `https://ironrest.herokuapp.com/tswcomments/${id}`,
         form
       );
 

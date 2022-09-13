@@ -24,7 +24,7 @@ export function CreateComments() {
 
     try {
       const response = await axios.post(
-        "https://ironrest.herokuapp.com/....",
+        "https://ironrest.herokuapp.com/tswcomments",
         form
       );
 

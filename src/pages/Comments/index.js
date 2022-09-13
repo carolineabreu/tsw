@@ -5,7 +5,7 @@ export function Comment() {
     async function fetchComments() {
       try {
         const response = await axios.get(
-          "https://ironrest.herokuapp.com/....."
+          "https://ironrest.herokuapp.com/tswcomments"
         );
 
         setComments([...response.data]);
