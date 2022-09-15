@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<EditPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route
           path="/country-list"
           element={<CountryList countries={countries} />}
