@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { StarRating } from "./star";
+import "./editDelete.css";
 
 export function EditPage() {
   const navigate = useNavigate();
@@ -66,57 +67,79 @@ export function EditPage() {
 
   return (
     <div className="EditDelete">
-      <h1>Edit </h1>
-      <form onSubmit={handleSubmit}>
+      <Link to="/">
+        <button id="backbtn">Back</button>
+      </Link>
+      <h1 id="edith1">Your Experience</h1>
+      <form onSubmit={handleSubmit} id="formEdit">
         <label htmlFor="commentTitle">Title</label>
-        <input
-          id="commentTitle"
-          name="title"
-          type="text"
-          value={form.title}
-          onChange={handleChange}
-        />
-        <label htmlFor="commentImage">Image</label>
-        <input
-          id="commentImage"
-          name="image"
-          type="text"
-          value={form.image}
-          onChange={handleChange}
-        />
-        <label htmlFor="commentRanking">Give a note</label>
-        <StarRating
-          id="commentRanking"
-          name="ranking"
-          value={form.ranking}
-          onChange={handleChange}
-        />
+        <p>
+          <input
+            id="commentTitle"
+            name="title"
+            type="text"
+            value={form.title}
+            onChange={handleChange}
+          />
+        </p>
+        <label htmlFor="commentImage">Image Link</label>
+        <p>
+          <input
+            id="commentImage"
+            name="image"
+            type="text"
+            value={form.image}
+            onChange={handleChange}
+          />
+        </p>
+        <label htmlFor="commentRanking">Rate</label>
+        <p>
+          <StarRating
+            id="commentRanking"
+            name="ranking"
+            value={form.ranking}
+            onChange={handleChange}
+          />
+        </p>
         <label htmlFor="commentDescription">Describe your Experience</label>
-        <input
-          id="commentDescription"
-          name="description"
-          type="text"
-          value={form.description}
-          onChange={handleChange}
-        />
+        <p>
+          <input
+            id="commentDescription"
+            name="description"
+            type="text"
+            value={form.description}
+            onChange={handleChange}
+          />
+        </p>
         <label htmlFor="commentDate">Date</label>
-        <input
-          id="commentDate"
-          name="date"
-          type="text"
-          value={form.date}
-          onChange={handleChange}
-        />
-        <label htmlFor="personsName">Your Name:</label>
-        <input
-          id="personsName"
-          name="name"
-          type="text"
-          value={form.name}
-          onChange={handleChange}
-        />
-        <button type="submit">Edit</button>
-        <button onClick={handleDelete}> Delete</button>
+        <p>
+          <input
+            id="commentDate"
+            name="date"
+            type="text"
+            value={form.date}
+            onChange={handleChange}
+          />
+        </p>
+        <label htmlFor="commentName">Your Name:</label>
+        <p>
+          <input
+            id="commentName"
+            name="name"
+            type="text"
+            value={form.name}
+            onChange={handleChange}
+          />
+        </p>
+        <div className="buttonsEdit">
+          <button type="submit" id="btn">
+            Edit
+          </button>
+          <button onClick={handleDelete} id="btnDelete">
+            {" "}
+            Delete
+          </button>
+        </div>
       </form>
     </div>
   );

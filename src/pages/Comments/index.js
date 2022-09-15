@@ -4,7 +4,6 @@ import axios from "axios";
 import { Form } from "./form";
 import "antd/dist/antd.css";
 import "./comments.css";
-import { Button } from "antd";
 
 export function Comment() {
   const [comments, setComments] = useState([]);
@@ -27,22 +26,30 @@ export function Comment() {
   return (
     <>
       <div className="currentComment">
-        <Button> Back </Button>
-        <h1>Comments</h1> <Form />
-        {comments.map((currentComment) => {
-          return (
-            <div className="idComment">
-              <Link to={`/${currentComment._id}`}>
-                <h2>{currentComment.title}</h2>
-                <img src={currentComment.image} alt={currentComment.name} />
-              </Link>
-              <p>{currentComment.ranking}</p>
-              <p>{currentComment.description}</p>
-              <p>{currentComment.date}</p>
-              <p>{currentComment.name}</p>
-            </div>
-          );
-        })}
+        <button id="btn">Back</button>
+        <h1 id="commenth1">Comments</h1>
+        <div className="flex">
+          <div className="flex-item">
+            {comments.map((currentComment) => {
+              return (
+                <div className="idComment">
+                  <Link to={`/${currentComment._id}`}>
+                    <h2>{currentComment.title}</h2>
+                    <img src={currentComment.image} alt={currentComment.name} />
+                    <p>{currentComment.ranking}</p>
+                    <p>{currentComment.description}</p>
+                    <p>{currentComment.date}</p>
+                    <p>{currentComment.name}</p>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex-item">
+            {" "}
+            <Form />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -39,7 +39,7 @@ export function Form() {
 
   return (
     <div className="form">
-      <h1> Share your Experience</h1>
+      <h1 id="formh1"> Share your Experience</h1>
       <form onSubmit={handleSubmit}>
         {" "}
         <label htmlFor="commentTitle">Title</label>{" "}
@@ -107,7 +107,9 @@ export function Form() {
             onChange={handleChange}
           />
         </p>
-        <button type="submit">Send</button>
+        <button type="submit" id="btn">
+          Send
+        </button>
       </form>
     </div>
   );
