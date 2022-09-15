@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { Comment } from "./pages/Comments/index";
-import { Form } from "./pages/Comments/form";
 import { EditPage } from "./pages/Comments/edit";
 import { CountryList } from "./pages/CountryList";
 import countries from "./data";
@@ -11,7 +10,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Comment />} />
-        <Route path="/form" element={<Form />} />
         <Route path="/:id" element={<EditPage />} />
         <Route
           path="/country-list"
