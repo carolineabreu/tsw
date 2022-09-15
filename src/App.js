@@ -5,14 +5,16 @@ import { EditPage } from "./pages/Comments/edit";
 import { CountryList } from "./pages/CountryList";
 import countries from "./data";
 import { CountryInfo } from "./pages/CountryInfo";
+import { SignUp } from "./pages/SignUp";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Comment />} />
+        <Route path="/comment" element={<Comment />} />
         <Route path="/form" element={<Form />} />
         <Route path="/:id" element={<EditPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route
           path="/country-list"
           element={<CountryList countries={countries} />}

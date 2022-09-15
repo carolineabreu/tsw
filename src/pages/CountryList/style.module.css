@@ -1,0 +1,14 @@
+.search {
+  width: 60vw;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+.searchBar {
+  margin: 10px 50px;
+}
+
+.list {
+  margin: 10px 50px;
+  font-size: 1.5rem;
+}
