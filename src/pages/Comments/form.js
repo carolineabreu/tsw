@@ -114,5 +114,3 @@ export function Form() {
     </div>
   );
 }
-
-//button.onclick = windows.onload (Comment)
