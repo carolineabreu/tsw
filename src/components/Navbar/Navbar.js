@@ -45,7 +45,7 @@ import "./Navbar.css"
               <Link to="/comments" 
               className="nav-links" 
               onClick={closeMobileMenu}>
-              Comments
+              Testimonial
               </Link>
             </li>
             <li className="nave-item">
@@ -55,16 +55,17 @@ import "./Navbar.css"
                 Country List
               </Link>
             </li>
-            <li className="nave-item">
-              <Link to="/sign-up" 
-              className="nav-links-mobile" 
-              onClick={closeMobileMenu}>
+            <li>
+              <Link
+                to='/sign-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
                 Sign Up
               </Link>
-            </li>
           </ul>
-          <button type = "submit" className='btn'>SIGN UP</button>
-        </div>
+          {button && <button buttonStyle='btn--outline'>SIGN UP</button>}        
+          </div>
       </nav>
     </>
   );

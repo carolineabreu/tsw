@@ -1,8 +1,8 @@
 import '../../App.css';
 
- function CountryInfo() {
+ function CountryList() {
   return <h1 className='list'>Country Info</h1>;
 
 }
 
-export default CountryInfo;
+export default CountryList;

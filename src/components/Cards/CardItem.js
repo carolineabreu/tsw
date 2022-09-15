@@ -4,20 +4,20 @@ import "../Cards/Cards.css"
 
 function CardItem(props) {
   
-  const { path,  label,  src, text} = props;
+
   return (
     <>
-      <li className='cards__item'>
-        <Link className='cards__item__link' to={props.path}>
-          <figure className='cards__item__pic-wrap' data-category={props.label}>
+      <li className='cards-item'>
+        <Link className='cards-item-link' to={props.path}>
+          <figure className='cards-item-pic-wrap' data-category={props.label}>
             <img
-              className='cards__item__img'
+              className='cards-item-img'
               alt='Travel'
               src={props.src}
             />
           </figure>
-          <div className='cards__item__info'>
-            <h5 className='cards__item__text'>{props.text}</h5>
+          <div className='cards-item-info'>
+            <h5 className='cards-tem-text'>{props.text}</h5>
           </div>
         </Link>
       </li>
