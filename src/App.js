@@ -15,6 +15,9 @@ function App() {
           path="/:id"
           element={<CountryInfo countries={countries} />}
         />
+        <Route path="/" element={<Comment />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/:id" element={<EditPage />} />
       </Routes>
     </div>
   );
