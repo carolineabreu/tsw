@@ -1,0 +1,44 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  width: 60vw;
+  height: auto;
+  object-fit: cover;
+  padding-left: 50px;
+}
+
+.tips {
+  display: flex;
+}
+
+ul {
+  padding: 0;
+  margin: 5px;
+}
+
+li {
+  padding: 5px;
+}
+
+.box {
+  padding: 10px;
+}
+
+.info {
+  width: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.title {
+  margin-left: 50px;
+}
