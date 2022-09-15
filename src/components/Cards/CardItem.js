@@ -4,7 +4,6 @@ import "../Cards/Cards.css"
 
 function CardItem(props) {
   
-
   return (
     <>
       <li className='cards-item'>
