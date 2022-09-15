@@ -63,6 +63,7 @@ import "./Navbar.css"
               >
                 Sign Up
               </Link>
+              </li>
           </ul>
           {button && <button buttonStyle='btn--outline'>SIGN UP</button>}        
           </div>
