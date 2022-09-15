@@ -7,17 +7,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route
-          path="/country-list"
-          element={<CountryList countries={countries} />}
-        />
-        <Route
-          path="/:id"
-          element={<CountryInfo countries={countries} />}
-        />
-        <Route path="/" element={<Comment />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/:id" element={<EditPage />} />
       </Routes>
     </div>
   );
