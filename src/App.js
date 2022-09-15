@@ -1,17 +1,19 @@
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
-import { Comment } from "./pages/Comments/index";
-import { Form } from "./pages/Comments/form";
+import Home from "./pages/Home/Home";
 import { EditPage } from "./pages/Comments/edit";
 import { CountryList } from "./pages/CountryList";
 import countries from "./data";
 import { CountryInfo } from "./pages/CountryInfo";
+import { SignUp } from "./pages/SignUp";
 
-function App( ) {
+function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Comment />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/" element={<Home />} />
         <Route path="/:id" element={<EditPage />} />
         <Route
           path="/country-list"
@@ -24,7 +26,6 @@ function App( ) {
       </Routes>
     </div>
   );
-
 }
 
 export default App;
