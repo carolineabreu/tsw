@@ -56,7 +56,7 @@ export function CountryInfo({ countries }) {
               <Box direction="row" gap="small">
                 <Box className={style.box}>
                   <Text color="text-strong" size="large" weight="bold">
-                    Trip Tips
+                    Best Cities*
                   </Text>
                   <Text color="text-strong">
                     {country[0].tips.topCities.map((currentCity) => {
@@ -90,6 +90,7 @@ export function CountryInfo({ countries }) {
           </Card>
 
         </div>
+        <p>*Score based on <a href="https://geosureglobal.com/">GeoSure</a> Women's Safety.</p>
       </div>
     </div>
   );

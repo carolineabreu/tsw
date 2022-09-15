@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import style from "./style.module.css";
 
 export function CountryList(countries) {
   const [search, setSearch] = useState("");
   return (
     <div>
-      <div>
-        <input placeholder="Enter Country" onChange={(e) => setSearch(e.target.value)} />
+      <div className={style.searchBar}>
+        <input className={style.search} placeholder="Enter Country" onChange={(e) => setSearch(e.target.value)} />
       </div>
       {countries.countries.filter(countries => {
         if (search === "") {
@@ -16,9 +17,11 @@ export function CountryList(countries) {
         }
       }).map((currentCountry) => {
         return (
-          <Link to={`/country-list/${currentCountry.id}`}>
-            {currentCountry.name}
-          </Link>
+          <div className={style.list}>
+            <Link to={`/country-list/${currentCountry.id}`}>
+              {currentCountry.name}
+            </Link>
+          </div>
         );
       })}
     </div>

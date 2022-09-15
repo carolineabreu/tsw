@@ -22,7 +22,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Dublin", "Cobh", "Cork"],
+      topCities: [
+        "Cork - 70/100",
+        "Cobh - 69/100",
+        "Dublin - 68/100"
+      ],
       activities: [
         "Belfast's Titanic Quarter",
         "Cliffs of Moher",
@@ -54,7 +58,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Reykjavík", "Isafjordur", "Akureyri"],
+      topCities: [
+        "Reykjavík - 75/100",
+        "Isafjordur - 73/100",
+        "Akureyri - 73/100"
+      ],
       activities: ["Hot Springs", "Whale Watching", "Reynisfjara Beach"],
       whenToGo: ["September to March are the months to see Northern Lights."]
     }
@@ -82,7 +90,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Stockholm", "Linkoping", "Orebro"],
+      topCities: [
+        "Orebro - 85/100",
+        "Linkoping - 81/100",
+        "Stockholm - 79/100"
+      ],
       activities: [
         "Ice hotel",
         "Spot the Northern Lights",
@@ -114,7 +126,11 @@ const countries = [
       continent: "North America"
     },
     tips: {
-      topCities: ["Quebec", "Vancouver", "Victoria"],
+      topCities: [
+        "Victoria - 79/100",
+        "Quebec - 74/100",
+        "Vancouver - 73/100"
+      ],
       activities: [
         "Niagara Falls",
         "Banff National Park",
@@ -145,7 +161,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Geneva", "Zurich", "Bern"],
+      topCities: [
+        "Geneva - 87/100",
+        "Bern - 80/100",
+        "Zurich - 78/100"
+      ],
       activities: ["The Matterhorn", "The Rhone Glacier", "Jungfraujoch"],
       whenToGo: ["April to October"]
     }
@@ -173,7 +193,11 @@ const countries = [
       continent: "Asia"
     },
     tips: {
-      topCities: ["Seoul", "Busan", "Bucheon"],
+      topCities: [
+        "Seoul - 65/100",
+        "Busan - 61/100",
+        "Bucheon - 61/100"
+      ],
       activities: [
         "DMZ (Demilitarized Zone)",
         "Yonggungsa Temple",
@@ -205,7 +229,11 @@ const countries = [
       continent: "Oceania"
     },
     tips: {
-      topCities: ["Auckland", "Dunedin", "Christchurch"],
+      topCities: [
+        "Dunedin - 76/100",
+        "Christchurch - 73/100",
+        "Auckland - 70/100"
+      ],
       activities: [
         "Hobbiton",
         "Te Whakarewarewa Geothermal Valley",
@@ -236,7 +264,11 @@ const countries = [
       continent: "South America"
     },
     tips: {
-      topCities: ["Punta del Este", "Montevideo", "Salto"],
+      topCities: [
+        "Punta del Este - 67/100",
+        "Salto - 65/100",
+        "Montevideo - 64/100"
+      ],
       activities: [
         "Colonia del Sacramento",
         "Wine Tasting in Carmelo",
@@ -268,7 +300,11 @@ const countries = [
       continent: "Asia"
     },
     tips: {
-      topCities: ["Tokio", "Okinawa", "Kyoto"],
+      topCities: [
+        "Kyoto - 71/100",
+        "Tokyo - 65/100",
+        "Okinawa - 60/100",
+      ],
       activities: ["Shinto shrine", "Mount Fuji", "Cherry Blossom Festival"],
       whenToGo: ["March to May and September to November"]
     }
@@ -296,7 +332,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Amsterdam", "Rotterdam", "The Hague"],
+      topCities: [
+        "The Hague - 75/100",
+        "Rotterdam - 73/100",
+        "Amsterdam - 72/100"
+      ],
       activities: [
         "Van Gogh Museum",
         "Hoge Veluwe National Park",
@@ -328,7 +368,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Bruges", "Brussels", "Ghent"],
+      topCities: [
+        "Brussels 79/100",
+        "Bruges 74/100",
+        "Ghent - 73/100"
+      ],
       activities: ["The Belfry", "Castle Gravensteen", "Mont des Arts"],
       whenToGo: ["April to June and between September and October"]
     }
@@ -356,7 +400,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Vienna", "Salzburg", "Innsbruck"],
+      topCities: [
+        "Innsbruck - 81/100",
+        "Salzburg - 80/100",
+        "Vienna - 76/100"
+      ],
       activities: [
         "Admont Abbey Library",
         "St. Stephen's Cathedral",
@@ -388,7 +436,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Tromsø", "Bergen", "Oslo"],
+      topCities: [
+        "Tromsø - 81/100",
+        "Oslo - 78/100",
+        "Bergen - 74/100"
+      ],
       activities: ["Flåm Railway", "Geirangerfjord", "Arctic Cathedral"],
       whenToGo: ["Between May and August."]
     }
@@ -416,7 +468,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Barcelona", "Valencia", "Bilbao"],
+      topCities: [
+        "Bilbao - 80/100",
+        "Valencia - 77/100",
+        "Barcelona - 75/100"
+      ],
       activities: [
         "Ciudad de las Artes y las Ciencias",
         "Mezquita de Cordoba",
@@ -429,14 +485,15 @@ const countries = [
     id: "PRT",
     name: "Portugal",
     images: [
-      require("./images/Countries/portugal-artem-zhukov-NvirgXMLaaY-unsplash.jpg"),
+      require("./images/Countries/portugal-artem-zhukov-NvirgXMLaaY-unsplash(1).jpg"),
       require("./images/Countries/portugal-igor-ferreira-5UpEOzKsQgk-unsplash.jpg"),
       require("./images/Countries/portugal-mark-lawson-7tS_YOTFTtA-unsplash.jpg")
     ],
     infos: {
       about: "Portugal, officially the Portuguese Republic, is the westernmost point in Europe. It's a country with an advanced economy and diverse industry and is known for its wine and olive oil production.",
       facts: [
-        "Portugal is the oldest country in Europe and the world's oldest bookstore is in Lisbon.",
+        "Portugal is the oldest country in Europe, and the world's oldest bookstore is in Lisbon.",
+        "The alliance between Portugal and England is one of the oldest alliances and was Portuguese lady and queen of England who introduces the five o'clock tea.",
         "There are around 600 species of birds in Portugal."
       ],
       language: ["Portuguese"],
@@ -447,7 +504,11 @@ const countries = [
       continent: "Europe"
     },
     tips: {
-      topCities: ["Lisbon", "Porto", "Coimbra"],
+      topCities: [
+        "Porto - 81/100",
+        "Lisbon - 78/100",
+        "Coimbra - 72/100"
+      ],
       activities: [
         "Castelo dos Mouros",
         "Big Waves Surf in Nazare",
