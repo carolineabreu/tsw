@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { StarRating } from "./star";
+import "antd/dist/antd.css";
 
-export function CreateComments() {
+export function Form() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -37,56 +38,77 @@ export function CreateComments() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="commentTitle">Title</label>
-      <input
-        id="commentTitle"
-        name="title"
-        type="text"
-        value={form.title}
-        onChange={handleChange}
-      />
-      <label htmlFor="commentImage">Image</label>
-      <input
-        id="commentImage"
-        name="image"
-        type="text"
-        value={form.image}
-        onChange={handleChange}
-      />
-      <label htmlFor="commentRanking">Give a note</label>
-      <input
-        id="commentRanking"
-        name="ranking"
-        type="button"
-        value={form.ranking}
-        onChange={StarRating}
-      />
-      <label htmlFor="commentDescription">Describe your Experience</label>
-      <input
-        id="commentDescription"
-        name="description"
-        type="text"
-        value={form.description}
-        onChange={handleChange}
-      />
-      <label htmlFor="commentDate">Date</label>
-      <input
-        id="commentDate"
-        name="date"
-        type="text"
-        value={form.date}
-        onChange={handleChange}
-      />
-      <label htmlFor="commentName">Your Name:</label>
-      <input
-        id="commentName"
-        name="name"
-        type="text"
-        value={form.name}
-        onChange={handleChange}
-      />
-      <button type="submit">Send</button>
-    </form>
+    <div className="form">
+      <h1> Share your Experience</h1>
+      <form onSubmit={handleSubmit}>
+        {" "}
+        <label htmlFor="commentTitle">Title</label>{" "}
+        <p>
+          {" "}
+          <input
+            id="commentTitle"
+            name="title"
+            type="text"
+            value={form.title}
+            onChange={handleChange}
+          />
+        </p>{" "}
+        <label htmlFor="commentImage">Image Link</label>
+        <p>
+          {" "}
+          <input
+            id="commentImage"
+            name="image"
+            type="text"
+            value={form.image}
+            onChange={handleChange}
+          />
+        </p>{" "}
+        <label htmlFor="commentRanking">Rate</label>
+        <p>
+          {" "}
+          <StarRating
+            id="commentRanking"
+            name="ranking"
+            value={form.ranking}
+            onChange={handleChange}
+          />
+        </p>{" "}
+        <label htmlFor="commentDescription">Describe your Experience</label>
+        <p>
+          {" "}
+          <input
+            id="commentDescription"
+            name="description"
+            type="text"
+            value={form.description}
+            onChange={handleChange}
+          />
+        </p>{" "}
+        <label htmlFor="commentDate">Date</label>
+        <p>
+          {" "}
+          <input
+            id="commentDate"
+            name="date"
+            type="text"
+            value={form.date}
+            onChange={handleChange}
+          />
+        </p>{" "}
+        <label htmlFor="commentName">Your Name:</label>
+        <p>
+          {" "}
+          <input
+            id="commentName"
+            name="name"
+            type="text"
+            value={form.name}
+            onChange={handleChange}
+          />
+        </p>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   );
 }

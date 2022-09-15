@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Star from "./Star";
-function StarRating({ onChange }) {
+import { Star } from "./starIcon";
+
+export function StarRating({ onChange }) {
   const [rating, setRating] = useState(0);
   const changeRating = (newRating) => {
     setRating(newRating);
@@ -18,4 +19,3 @@ function StarRating({ onChange }) {
     </span>
   );
 }
-export function StarRating({ onChange });
