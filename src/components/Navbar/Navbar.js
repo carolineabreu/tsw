@@ -19,7 +19,6 @@ function Navbar() {
   };
 
   useEffect(() => {
-    // let isMounted = true;
     showButton();
   }, []);
 
@@ -49,23 +48,22 @@ function Navbar() {
               </Link>
             </li>
             <li className="nave-item">
-              <Link to="/"
+              <Link to="country-list"
                 className="nav-links"
                 onClick={closeMobileMenu}>
                 Country List
               </Link>
             </li>
-            <li>
-              <Link
-                to="/sign-up"
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
+            <li className="nave-item">
+            <Link
+                to='/sign-up'
+                // className='nav-links'
+                onClick={handleClick}
               >
-                Sign Up
+                {button && <button buttonStyle='btn--outline'>SIGN UP</button>}
               </Link>
             </li>
           </ul>
-          {button && <button buttonStyle='btn--outline'>SIGN UP</button>}
         </div>
       </nav>
     </>
