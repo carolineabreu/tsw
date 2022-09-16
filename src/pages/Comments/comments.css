@@ -95,9 +95,6 @@ float: right;
   border-radius: 5%;
   
 }
-#btn:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-}
 
 #btnDelete {
   border-color: #000204;
@@ -109,9 +106,6 @@ float: right;
   transition: all 150ms ease-in-out;
   border-radius: 5%;
   
-}
-#btnDelete:hover {
-  box-shadow: 0 0 10px 0 #ed0202 inset, 0 0 10px 4px #ed0202;
 }
 
 .h2comment {
