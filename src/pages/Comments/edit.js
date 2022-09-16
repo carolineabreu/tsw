@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { StarRating } from "./star";
 import "./editDelete.css";
 
@@ -47,8 +47,6 @@ export function EditPage() {
         form
       );
 
-      navigate("/");
-
       console.log(response);
     } catch (err) {
       console.log(err);
@@ -67,9 +65,6 @@ export function EditPage() {
 
   return (
     <div className="EditDelete">
-      <Link to="/">
-        <button id="backbtn">Back</button>
-      </Link>
       <h1 id="edith1">Your Experience</h1>
       <form onSubmit={handleSubmit} id="formEdit">
         <label htmlFor="commentTitle">Title</label>
