@@ -1,6 +1,6 @@
 .EditDelete { 
   background-image: url("./waterfal.jpg");
-  background-size: auto;  
+  background-size: cover;  
   size: large;
   text-align: center;
   color: black;
@@ -8,7 +8,7 @@
   padding-bottom: 20px;
 }
 
-#backbtn {
+#btn {
   border-color: #000204;
   color: rgb(0, 0, 0);
   font-size: large;
@@ -17,13 +17,25 @@
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   border-radius: 5%;
-  position:absolute;
-  top:0;
-  left:0;
   
 }
-#backbtn:hover {
+#btn:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+#btnDelete {
+  border-color: #000204;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  width: 90px;
+  box-shadow: 0 0 40px 40px #ed0202 inset, 0 0 0 0 #ed0202;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  border-radius: 5%;
+  
+}
+#btnDelete:hover {
+  box-shadow: 0 0 10px 0 #ed0202 inset, 0 0 10px 4px #ed0202;
 }
 
 
