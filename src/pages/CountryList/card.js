@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from "./style.module.css";
 
 function CardItem(props) {
 
   return (
     <>
-      <li className='cards-item'>
+      <li className={style.CardItem}>
         <Link className='cards-item-link' to={props.path}>
           <figure className='cards-item-pic-wrap' data-category={props.label}>
             <img

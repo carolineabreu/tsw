@@ -55,12 +55,12 @@ function Navbar() {
               </Link>
             </li>
             <li className="nave-item">
-            <Link
+              <Link
                 to='/sign-up'
                 // className='nav-links'
                 onClick={handleClick}
               >
-                {button && <button buttonStyle='btn--outline'>SIGN UP</button>}
+                {button && <button className="btnNav" buttonStyle='btn--outline'>SIGN UP</button>}
               </Link>
             </li>
           </ul>
