@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import "../../components/Cards/Cards.css"
 
 
 function AboutUs(props) { 
