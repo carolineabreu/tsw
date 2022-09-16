@@ -155,8 +155,16 @@
     color: #242424;
     transition: 250ms;
   }
- .btn {
-font-size: 20px;
+  .btn {
+    font-size: 20px;
+  }
+}
 
- }
+.btnNav {
+  margin-top: 10px;
+  color: #2c423f;
+  border: none;
+  border: 1px solid #2c423f;
+  border-radius: 5px;
+  padding: 5px;
 }

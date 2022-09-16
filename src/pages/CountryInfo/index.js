@@ -25,33 +25,53 @@ export function CountryInfo({ countries }) {
         </Carousel>
       </div>
       <div className={style.info}>
-        <p><strong>About: </strong>{country[0].infos.about}</p>
+        <p className={style.infoAbout}>{country[0].infos.about}</p>
 
-        <strong>Language: </strong>
-        {country[0].infos.language.map((currentLanguage) => {
-          return (
-            <ul><span>{currentLanguage}</span></ul>
-          );
-        })}
+        <div className={style.containerInfo}>
+          <div className={style.info1}>
+            <strong>Language: </strong>
+            {country[0].infos.language.map((currentLanguage) => {
+              return (
+                <span>{currentLanguage}</span>
+              );
+            })}
 
-        <p><strong>Capital: </strong>{country[0].infos.capital}</p>
-        <p><strong>Continent: </strong>{country[0].infos.continent}</p>
-        <p><strong>Currency: </strong>{country[0].infos.countryCurrency}</p>
-        <p><strong>Population: </strong>{country[0].infos.population}</p>
-        <p><strong>Climate: </strong>{country[0].infos.climate}</p>
-        <p><strong>When to go: </strong>{country[0].tips.whenToGo}</p>
-        <strong>Facts: </strong>
+            <p><strong>Capital: </strong>{country[0].infos.capital}</p>
+            <p><strong>Continent: </strong>{country[0].infos.continent}</p>
+          </div>
+          <div className={style.info2}>
+            <p><strong>Currency: </strong>{country[0].infos.countryCurrency}</p>
+            <p><strong>Population: </strong>{country[0].infos.population}</p>
+          </div>
+          <div>
+            <p><strong>Climate: </strong>{country[0].infos.climate}</p>
+            <p><strong>When to go: </strong>{country[0].tips.whenToGo}</p>
+          </div>
+        </div>
 
-        {country[0].infos.facts.map((currentFact) => {
-          return (<ul>
-            <li>{currentFact}</li>
-          </ul>);
-        })}
+        <Card className={style.card} width="640px">
+          <CardBody>
+            <Box direction="row" gap="small">
+              <Box className={style.box}>
+                <Text color="text-strong" size="large" weight="bold">
+                  Facts:
+                </Text>
+                <Text color="text-strong">
+                  {country[0].infos.facts.map((currentFact) => {
+                    return (<ul>
+                      <li>{currentFact}</li>
+                    </ul>);
+                  })}
+                </Text>
+              </Box>
+            </Box>
+          </CardBody>
+        </Card>
 
 
         <div className={style.tips}>
 
-          <Card className={style.card} width="medium">
+          <Card className={style.card} width="350px">
             <CardBody>
               <Box direction="row" gap="small">
                 <Box className={style.box}>
@@ -70,7 +90,7 @@ export function CountryInfo({ countries }) {
             </CardBody>
           </Card>
 
-          <Card className={style.card} width="medium">
+          <Card className={style.card} width="350px">
             <CardBody>
               <Box direction="row" gap="small">
                 <Box className={style.box}>

@@ -5,6 +5,10 @@
   border-radius: 5px;
 }
 
+li {
+  list-style: none;
+}
+
 .searchBar {
   margin: 10px 50px;
 }
@@ -14,7 +18,23 @@
   flex-wrap: wrap;
 }
 
-.cardItem {
+.cardItems {
   margin: 10px 50px;
   width: 20vw;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content-blog-container {
+    width: 84%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cardsItems {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cardsItem {
+    margin-bottom: 2rem;
+  }
 }

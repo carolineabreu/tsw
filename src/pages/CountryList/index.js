@@ -19,7 +19,7 @@ export function CountryList(countries) {
         }).map((currentCountry) => {
           return (
             <div className={style.card}>
-              <div className={style.cardItem}>
+              <div className={style.cardItems}>
                 <CardItem
                   src={currentCountry.images[0]}
                   label={currentCountry.name}
