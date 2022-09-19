@@ -1,5 +1,5 @@
 import CardItem from './CardItem';
-import "../Cards/Cards.css";
+import "../../components/Cards/Cards.css"
 import images from "../../images/ireland2.jpg";
 import images2 from "../../images/iceland1.jpg";
 import images3 from "../../images/sweden1.jpg";
