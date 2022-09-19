@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../Cards/Cards.css"
+import "../../components/Cards/Cards.css"
 
 function CardItem(props) {
-  
+
   return (
     <>
       <li className='cards-item'>

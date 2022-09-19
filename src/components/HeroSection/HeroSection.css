@@ -1,37 +1,48 @@
 .hero-container {
-    background: url('/src/images/irelandlandscape.jpg') center center/cover no-repeat; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-  }
-
-  .hero-msg {
-color: white; 
-font-family: 'Josefin Sans', sans-serif;
-font-size: 40px;
-text-align: center;
-font-weight: bolder;
-margin: 30px 300px;
-letter-spacing: 2px;
-
-  }
-
-  .hero-heading {
-font-size: 20px;
-margin: 10px 210px;
-padding-bottom: 90px;
-color: white;
-text-align: center;
-font-family: 'Merriweather', serif;  
+  background: url("/src/images/irelandlandscape.jpg") center center/cover
+    no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
 }
-  
-    span {
-        text-decoration: #cf2e2e underline;
-    }
 
+.hero-container > h1 {
+  color: #fff;
+  opacity: 1;
+  font-family: "League Spartan", sans-serif;
+  font-size: 80px;
+  margin-top: -100px;
+  max-width: 56rem;
+  line-height: 1;
+}
 
+.hero-container > p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 25px;
+  font-family: "Libre Baskerville", serif;
+  /* max-width: 40rem; */
+  line-height: 1.5;
+}
+span {
+  text-decoration: blue, underline;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    max-width: 500px;
+    font-size: 50px;
+  }
+
+  .hero-container > p {
+    max-width: 500px;
+    font-size: 20px;
+    margin: -30px 120px;
+    padding-top: 30px;
+  }
+}
