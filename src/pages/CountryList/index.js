@@ -5,7 +5,7 @@ import CardItem from "./card";
 export function CountryList(countries) {
   const [search, setSearch] = useState("");
   return (
-    <div>
+    <div className={style.page}>
       <div className={style.searchBar}>
         <input className={style.search} placeholder="Enter Country" onChange={(e) => setSearch(e.target.value)} />
       </div>
