@@ -1,12 +1,12 @@
-import React from 'react';
+import { style } from '@mui/system';
 import { Link } from 'react-router-dom';
-import "../../components/Cards/Cards.css"
 
-function CardItem(props) {
+
+function AboutUs(props) {
 
   return (
     <>
-      <li className='cards-item'>
+      <li className={style.Cards}>
         <Link className='cards-item-link' to={props.path}>
           <figure className='cards-item-pic-wrap' data-category={props.label}>
             <img
@@ -24,4 +24,4 @@ function CardItem(props) {
   );
 }
 
-export default CardItem;
+export default AboutUs;

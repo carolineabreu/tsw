@@ -1,5 +1,5 @@
 import React from 'react';
-import './Fotter.css';
+import './Footer.css';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-         Sign up to receive monthly testimonials of our STW community members.
+          Sign up to receive monthly testimonials of our STW community members.
         </p>
         <p className='footer-subscription-text'>
           You can unsubscribe at any time.
@@ -20,27 +20,27 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <button type = "submit" className='btn'>Subscribe</button>
+            <button type="submit" className='btn'>Subscribe</button>
           </form>
         </div>
       </section>
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>  
-          <h2>About us</h2>
-            <Link to='/sign-up'>The team</Link>
-            <Link to='/'>Testimonials</Link>   
+          <div className='footer-link-items'>
+            <h2>About us</h2>
+            <Link to='/about-us'>The team</Link>
+            <Link to='/'>Testimonials</Link>
             <Link to='/'>Terms of Service</Link>
-            <Link to='/'>Careers</Link>         
+            <Link to='/'>Careers</Link>
           </div>
+        </div>
+        <div className='footer-link-wrapper'>
+          <div className='footer-link-items'>
+            <h2> Contact us</h2>
+            <Link to='/'>+1 587 376 8945</Link>
+            <Link to='/'> tsw@gmail.com</Link>
+            <Link to='/'> Whatsapp</Link>
           </div>
-          <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>  
-           <h2> Contact us</h2> 
-           <Link to='/'>+1 587 376 8945</Link>   
-           <Link to='/'> tsw@gmail.com</Link>   
-           <Link to='/'> Whatsapp</Link>   
-          </div>    
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -54,7 +54,7 @@ function Footer() {
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
-          <div classNames='footer-logo'>
+          <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               TSW
               <i className='fa-solid fa-plane' />

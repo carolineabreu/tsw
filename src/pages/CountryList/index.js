@@ -1,29 +1,35 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import style from "./style.module.css";
+import CardItem from "./card";
 
 export function CountryList(countries) {
   const [search, setSearch] = useState("");
   return (
-    <div>
+    <div className={style.page}>
       <div className={style.searchBar}>
         <input className={style.search} placeholder="Enter Country" onChange={(e) => setSearch(e.target.value)} />
       </div>
-      {countries.countries.filter(countries => {
-        if (search === "") {
-          return countries;
-        } else if (countries.name.toLowerCase().includes(search.toLowerCase())) {
-          return countries;
-        }
-      }).map((currentCountry) => {
-        return (
-          <div className={style.list}>
-            <Link to={`/country-list/${currentCountry.id}`}>
-              {currentCountry.name}
-            </Link>
-          </div>
-        );
-      })}
+      <div className={style.container}>
+        {countries.countries.filter(countries => {
+          if (search === "") {
+            return countries;
+          } else if (countries.name.toLowerCase().includes(search.toLowerCase())) {
+            return countries;
+          }
+        }).map((currentCountry) => {
+          return (
+            <div className={style.card}>
+              <div className={style.cardItems}>
+                <CardItem
+                  src={currentCountry.images[0]}
+                  label={currentCountry.name}
+                  path={`/country-list/${currentCountry.id}`}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

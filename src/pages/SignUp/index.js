@@ -1,6 +1,11 @@
 import style from "./style.module.css";
 
 export function SignUp() {
+
+  function refreshPage() {
+    window.location.reload(true);
+  }
+
   return (
     <div className={style.signUp}>
       <h1>Sign Up</h1>
@@ -27,7 +32,7 @@ export function SignUp() {
         </div>
       </div>
       <div class={style.footer}>
-        <button type="submit" class={style.signUpBtn}>Register</button>
+        <button onClick={refreshPage} class={style.signUpBtn}>Register</button>
       </div>
     </div>
   );

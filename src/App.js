@@ -7,6 +7,8 @@ import { CountryList } from "./pages/CountryList";
 import countries from "./data";
 import { CountryInfo } from "./pages/CountryInfo";
 import { SignUp } from "./pages/SignUp";
+import { Comment } from "./pages/Comments/index";
+import Us from "./pages/AboutUs/Us";
 
 function App() {
   return (
@@ -14,8 +16,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/comments" element={<Comment />} />
         <Route path="/:id" element={<EditPage />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/about-us" element={<Us />} />
+
         <Route
           path="/country-list"
           element={<CountryList countries={countries} />}
