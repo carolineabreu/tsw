@@ -56,8 +56,6 @@ export function EditPage() {
   async function handleDelete() {
     try {
       await axios.delete(`https://ironrest.herokuapp.com/tswcomments/${id}`);
-
-      navigate("/");
     } catch (err) {
       console.log(err);
     }
