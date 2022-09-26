@@ -25,7 +25,7 @@ function Us() {
             />
             <AboutUs
               src={image8}
-              text="Hi, I’m Zih, a Brazilian native, who loves to travel and discover the world. Although I enjoy traveling on my own, safety has always been a huge concern for me. The truth is that women face greater obstacles, especially when travelling alone. This website was create to help women find safe destinations, and to show them that travelling can not only be safe  but they can  also have positive and rewarding experiences if they plan well and ahead. If would like to connect: https://www.linkedin.com/in/zimarlen-silva-49a7a0238/ "
+              text="Hi, I’m Zih, a Brazilian native who loves to travel and discover the world. Although I enjoy travelling solo, safety has always been a concern. The truth is that women face significant obstacles, especially when travelling alone. We created this website to help women find safe destinations and show that travelling can be safe and full of positive and rewarding experiences if planned well. If would like to connect: https://www.linkedin.com/in/zimarlen-silva-49a7a0238/ "
               path='about-us'
             />
           </ul>
