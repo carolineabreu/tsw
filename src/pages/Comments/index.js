@@ -8,6 +8,12 @@ import "./comments.css";
 export function Comment() {
   const [comments, setComments] = useState([]);
 
+  const handleClick = (e ) => {
+    e.preventDefault( );
+    console.log('Back');
+  }
+
+
   useEffect(() => {
     async function fetchComments() {
       try {
@@ -26,7 +32,7 @@ export function Comment() {
   return (
     <>
       <div className="currentComment">
-        <button onClick={() => handleClick(e)} id="btn">Back</button>
+        <button type="button" onClick={handleClick} id="btn">Back</button>
         <h1 id="commenth1">Comments</h1>
         <div className="flex">
           <div className="flex-item">
