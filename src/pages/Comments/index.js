@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import { Form } from "./form";
 import "antd/dist/antd.css";
@@ -7,10 +7,12 @@ import "./comments.css";
 
 export function Comment() {
   const [comments, setComments] = useState([]);
+const useHistory = useHistory( );
 
   const handleClick = (e ) => {
     e.preventDefault( );
     console.log('Back');
+    window.history.back();
   }
 
 
