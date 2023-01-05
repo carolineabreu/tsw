@@ -26,7 +26,7 @@ export function Comment() {
   return (
     <>
       <div className="currentComment">
-        <button id="btn">Back</button>
+        <button onClick={() => handleClick(e)} id="btn">Back</button>
         <h1 id="commenth1">Comments</h1>
         <div className="flex">
           <div className="flex-item">
