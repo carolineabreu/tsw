@@ -1,6 +1,7 @@
 .navbar {
   background: #2c423f;
-  height: 80px;
+  height: 70px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -22,16 +23,22 @@
 .navbar-logo {
   color: white;
   justify-self: start;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
+  /* padding:4px; */
+}
+
+.fa-plane{
+/* padding-top:4px; */
 }
 .navbar-logo > h1 {
   color: white;
   font-family: "Dancing Script", sans-serif;
+  /* margin-bottom: -30px; */
 }
 
 .nav-menu {
@@ -67,7 +74,7 @@
 
 .fa-bars {
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .-mobile {
@@ -79,9 +86,9 @@
 }
 
 .fa-solid {
-  padding-left: 15px;
+  padding-left: 15px; 
   padding-bottom: 15px;
-  color: white;
+   color: white; 
 }
 
 @media screen and (max-width: 960px) {
@@ -122,12 +129,12 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
+  /* .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
-  }
+  } */
 
   .menu-icon {
     display: block;
@@ -167,5 +174,35 @@
     background: #fff;
     color: #2c423f;
     transition: 250ms;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-menu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-menu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .nav-links {
+    width: 100%;
   }
 }
