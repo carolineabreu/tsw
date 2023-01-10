@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import style from "./style.module.css";
+import style from "./CountryInfo.module.css";
 import { Carousel, Image } from 'grommet';
 import { Box, Card, CardBody, Text } from 'grommet';
 // import axios from "axios";

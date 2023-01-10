@@ -1,8 +1,10 @@
 .navbar {
   background: #2c423f;
-  height: 80px;
+  padding-left: 20px;
+  /* height: 70px; */
+  /* width: 100%; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -14,26 +16,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  /* height: 80px; */
   max-width: 1500px;
   margin: 30px 0 0 0;
 }
 
-.navbar-logo {
+.navbar-box {
   color: white;
   justify-self: start;
   margin-left: 10px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
-}
-.navbar-logo > h1 {
-  color: white;
-  /* font-family: "Dancing Script", sans-serif; */
+  /* padding:4px; */
 }
 
+.navbar-logo  {
+  color: white;
+  font-family: "Dancing Script", sans-serif;
+  /* margin-bottom: -30px; */
+}
+
+.navbar-logo:hover {
+  color: darkgreen;
+  transition: all 0.2s ease-out;
+
+}
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -67,7 +77,7 @@
 
 .fa-bars {
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .-mobile {
@@ -78,10 +88,10 @@
   display: none;
 }
 
-.fa-solid {
-  padding-left: 15px;
-  padding-bottom: 15px;
-  color: white;
+.fa-x {
+  /* padding-left: 15px;  */
+  /* padding-bottom: 15px; */
+   color: white; 
 }
 
 @media screen and (max-width: 960px) {
@@ -122,18 +132,19 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
+  /* .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
-  }
+  } */
 
   .menu-icon {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
+    padding-top:8px;
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
@@ -144,10 +155,10 @@
     font-size: 2rem;
   }
 
-  .fa-solid {
+  /* .fa-x {
     padding-left: 15px;
     padding-bottom: 15px;
-  }
+  } */
 
   .nav-links-mobile {
     display: block;
@@ -167,5 +178,59 @@
     background: #fff;
     color: #2c423f;
     transition: 250ms;
+  }
+}
+
+@media screen and (max-width: 768px) {
+.navbar-logo {
+  font-size: 1.7rem;
+}
+
+.fa-bars {
+ font-size: 2.2rem;
+ padding-top: 8px;
+}
+.fa-solid {
+font-size: 2.2rem;
+}
+.nav-links {
+  font-size: 1.8rem;
+}
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-menu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
+  
+  .fa-bars {
+   font-size: 1.8rem;
+   padding-top: 8px;
+  }
+  .fa-x {
+  font-size: 1.4rem;
+  }
+
+  .fa-plane {
+    font-size: 1.4rem;
+  }
+  .nav-links {
+    font-size: 1.2rem;
+  }
+  .nav-links {
+    padding: 1.4rem;
   }
 }

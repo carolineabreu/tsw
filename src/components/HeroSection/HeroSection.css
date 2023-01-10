@@ -1,4 +1,4 @@
-.hero-container {
+.hero {
   background: url("/src/images/irelandlandscape.jpg") center center/cover
     no-repeat;
   height: 100vh;
@@ -11,38 +11,43 @@
   object-fit: contain;
 }
 
-.hero-container > h1 {
-  color: #fff;
+.hero__container {
+  color: white;
   opacity: 1;
   font-family: "League Spartan", sans-serif;
-  font-size: 80px;
-  margin-top: -100px;
-  max-width: 56rem;
+  font-size: 38px;
   line-height: 1;
+  margin:30px;
+ 
 }
+.hero__underline {
+  text-decoration-line: underline;
+  text-decoration-color: #a8141e;
+} 
 
-.hero-container > p {
+.hero__box {
   margin-top: 8px;
-  color: #fff;
-  font-size: 25px;
+  color: #c8dad8;
+  font-size: 18px;
   font-family: "Libre Baskerville", serif;
   /* max-width: 40rem; */
   line-height: 1.5;
+  margin-top: 10px;
+  margin: 10px 15px 0px 25px;
+
 }
-span {
-  text-decoration: blue, underline;
+
+.hero__name {
+  color: #c8dad8;
 }
 
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
-    max-width: 500px;
-    font-size: 50px;
+    /* max-width: 500px; */
+    font-size: 30px;
   }
 
-  .hero-container > p {
-    max-width: 500px;
-    font-size: 20px;
-    margin: -30px 120px;
-    padding-top: 30px;
-  }
 }
+
+
+
