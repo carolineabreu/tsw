@@ -21,10 +21,10 @@
   margin: 30px 0 0 0;
 }
 
-.navbar-logo {
+.navbar-box {
   color: white;
   justify-self: start;
-  /* margin-left: 10px; */
+  margin-left: 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.3rem;
@@ -33,10 +33,7 @@
   /* padding:4px; */
 }
 
-.fa-plane{
-/* padding-top:4px; */
-}
-.navbar-logo > h1 {
+.navbar-logo  {
   color: white;
   font-family: "Dancing Script", sans-serif;
   /* margin-bottom: -30px; */
@@ -91,9 +88,9 @@
   display: none;
 }
 
-.fa-solid {
-  padding-left: 15px; 
-  padding-bottom: 15px;
+.fa-x {
+  /* padding-left: 15px;  */
+  /* padding-bottom: 15px; */
    color: white; 
 }
 
@@ -158,10 +155,10 @@
     font-size: 2rem;
   }
 
-  .fa-solid {
+  /* .fa-x {
     padding-left: 15px;
     padding-bottom: 15px;
-  }
+  } */
 
   .nav-links-mobile {
     display: block;
@@ -184,6 +181,22 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+.navbar-logo {
+  font-size: 1.7rem;
+}
+
+.fa-bars {
+ font-size: 2.2rem;
+ padding-top: 8px;
+}
+.fa-solid {
+font-size: 2.2rem;
+}
+.nav-links {
+  font-size: 1.8rem;
+}
+}
 
 @media (max-width: 320px) {
   .navbar {
@@ -199,4 +212,25 @@
     width: 100%;
   }
 
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
+  
+  .fa-bars {
+   font-size: 1.8rem;
+   padding-top: 8px;
+  }
+  .fa-x {
+  font-size: 1.4rem;
+  }
+
+  .fa-plane {
+    font-size: 1.4rem;
+  }
+  .nav-links {
+    font-size: 1.2rem;
+  }
+  .nav-links {
+    padding: 1.4rem;
+  }
 }

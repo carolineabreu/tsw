@@ -1,4 +1,4 @@
-import style from "./style.module.css";
+import style from "./SignUp.module.css";
 
 export function SignUp() {
 

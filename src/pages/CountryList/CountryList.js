@@ -1,6 +1,6 @@
 import { useState } from "react";
-import style from "./style.module.css";
-import CardItem from "./card";
+import style from "./CountryList.module.css";
+import CardItem from "./CountryCard";
 
 export function CountryList(countries) {
   const [search, setSearch] = useState("");
