@@ -2,11 +2,19 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Form } from "./form";
-import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css'
 import "./comments.css";
 
 export function Comment() {
   const [comments, setComments] = useState([]);
+// const useHistory = useHistory( );
+
+  // const handleClick = (e ) => {
+  //   e.preventDefault( );
+  //   console.log('Back');
+  //   window.history.back();
+  // }
+
 
   useEffect(() => {
     async function fetchComments() {
@@ -26,7 +34,7 @@ export function Comment() {
   return (
     <>
       <div className="currentComment">
-        <button id="btn">Back</button>
+        <button type="button" id="btn">Back</button>
         <h1 id="commenth1">Comments</h1>
         <div className="flex">
           <div className="flex-item">

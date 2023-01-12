@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../../components/Cards/Cards.css"
+import "./Cards.css"
 
 function CardItem(props) {
 
@@ -16,7 +16,7 @@ function CardItem(props) {
             />
           </figure>
           <div className='cards-item-info'>
-            <h5 className='cards-tem-text'>{props.text}</h5>
+            <h5 className='cards-item-text'>{props.text}</h5>
           </div>
         </Link>
       </li>

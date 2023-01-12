@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
+    <div className='footer'>
+      <section className='footer_subscription'>
         <p className='footer-subscription-heading'>
           Sign up to receive monthly testimonials of our STW community members.
         </p>
@@ -57,7 +57,7 @@ function Footer() {
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               TSW
-              <i className='fa-solid fa-plane' />
+              <i className='fa-solid fa-solid fa-plane' />
             </Link>
           </div>
           <small className='website-rights'>TSW © 2022</small>

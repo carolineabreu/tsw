@@ -1,7 +1,7 @@
-.hero-container {
+.hero {
   background: url("/src/images/irelandlandscape.jpg") center center/cover
     no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,38 +11,63 @@
   object-fit: contain;
 }
 
-.hero-container > h1 {
-  color: #fff;
+.hero__block {
+  color: white;
   opacity: 1;
   font-family: "League Spartan", sans-serif;
-  font-size: 80px;
-  margin-top: -100px;
-  max-width: 56rem;
+  font-size: 38px;
   line-height: 1;
-}
+  padding-left: 2rem;
 
-.hero-container > p {
+}
+.hero__underline {
+  text-decoration-line: underline;
+  text-decoration-color: #a8141e;
+} 
+
+.hero__box {
   margin-top: 8px;
-  color: #fff;
-  font-size: 25px;
+  color: #c8dad8;
+  font-size: 18px;
   font-family: "Libre Baskerville", serif;
   /* max-width: 40rem; */
   line-height: 1.5;
+  margin-top: 10px;
+  margin: 10px 15px 0px 25px;
 }
-span {
-  text-decoration: blue, underline;
+
+.hero__name {
+  color: #c8dad8;
 }
 
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
-    max-width: 500px;
-    font-size: 50px;
+    /* max-width: 500px; */
+    font-size: 30px;
   }
 
-  .hero-container > p {
-    max-width: 500px;
-    font-size: 20px;
-    margin: -30px 120px;
-    padding-top: 30px;
-  }
+  @media (max-width: 320px) {
+.hero {
+  min-height: 29rem;
+  width: 100%;
 }
+.hero__block {
+  font-size: 2.5rem;
+  padding-left: 2rem;
+  padding-bottom:0rem;
+
+}
+
+.hero__box {
+  font-size:1rem;
+  /* padding:0.5rem ; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+  }
+
+}
+
+
+

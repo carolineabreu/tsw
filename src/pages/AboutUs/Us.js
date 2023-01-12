@@ -1,5 +1,5 @@
 import AboutUs from './About';
-import style from "./style.module.css";
+import style from "./AboutUs.module.css";
 import image6 from "../../images/Lari.jpg";
 import image7 from "../../images/Carol.jpg";
 import image8 from "../../images/Zih.jpg";
