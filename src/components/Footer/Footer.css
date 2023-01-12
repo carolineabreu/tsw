@@ -24,6 +24,7 @@
   font-size: 1rem;
   padding: 4px 0px 4px 0px;
 }
+
 .footer-subscription > p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -78,6 +79,7 @@
   margin-bottom: 16px;
   justify-content: center;
   display: flex;
+  text-decoration: underline;
 }
 
 .footer-link-items > h2 {
@@ -93,8 +95,9 @@
 }
 
 .footer-link-items a:hover {
-  color: darkgreen;
+  color: #548079;
   transition: 0.3s ease-out;
+  transform: scale(1.2);
 }
 
 .footer-email-form h2 {
@@ -192,6 +195,7 @@
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 320px) {
   .footer-container {
     width: 100%;
@@ -203,13 +207,13 @@
   }
 
   .footer-link-items h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     justify-content: center;
     display: flex;
   }
 
   .footer-link-items {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     display: flex;
     justify-content: center;
   }

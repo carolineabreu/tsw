@@ -39,7 +39,7 @@
 }
 
 .navbar-logo:hover {
-  color: darkgreen;
+  color: #405561;
   transition: all 0.2s ease-out;
 }
 
@@ -79,7 +79,7 @@
 
 .nav-links:hover {
   border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .fa-bars {
@@ -102,11 +102,8 @@
 }
 .btn-nav {
   background-color: #40615C;
-  padding: 6px;
-}
-
-.plane {
-font-size:rem;
+  padding: 8px;
+  border-radius: 6px;
 }
 
 @media (max-width: 960px) {
@@ -191,7 +188,7 @@ font-size:rem;
 
   .nav-links-mobile:hover {
     background: #fff;
-    color: #2c423f;
+    color: #405561;
     transition: 250ms;
   }
 }
