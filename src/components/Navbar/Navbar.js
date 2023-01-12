@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -10,25 +10,27 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
+  // const showButton = () => {
+  //   if (window.innerWidth >= 960) {
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // };
 
-  useEffect(() => {
-    showButton();
-  }, []);
+  // useEffect(() => {
+  //   showButton();
+  // }, []);
 
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div className="navbar-cont">
           <Link to='/' className='navbar-box' onClick={closeMobileMenu}>
             <h1 className='navbar-logo' > TSW </h1> 
+            <div className='plane'>
             <i className="fa-solid fa-plane" />
+            </div>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-x" : "fas fa-bars"} />
@@ -58,7 +60,7 @@ function Navbar() {
                 to='/sign-up'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}>
-                {button && <button  >SIGN UP</button>}
+                {button && <button className='btn-nav'  >SIGN UP</button>}
               </Link>
 
             </li>

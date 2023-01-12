@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <div className="hero">
       <div >
-        <h1 className="hero__container">
+        <h1 className="hero__block">
           SAFE DESTINATIONS FOR{" "}
           <span className="hero__underline">WOMEN</span>
         </h1>

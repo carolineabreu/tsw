@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer_container'>
+    <div className='footer'>
       <section className='footer_subscription'>
         <p className='footer-subscription-heading'>
           Sign up to receive monthly testimonials of our STW community members.

@@ -95,7 +95,7 @@
   }
   
   .cards-item-info {
-    padding: 20px 30px 30px;
+    padding: 10px 20px;
   }
   
   .cards-item-text {
@@ -113,11 +113,17 @@
   @media only screen and (min-width: 1024px) {
     .cards-items {
       display: flex;
+      
     }
   }
   
-  @media only screen and (max-width: 1024px) {
-    .cards-item {
-      margin-bottom: 2rem;
+    @media only screen and (max-width: 320px) {
+      .cards-item {
+        margin-bottom: 1rem;
+      }
+    .cards-item-text  {
+      color: #252e48;
+      font-size: 1rem;
+      line-height: 24px;
     }
   }
