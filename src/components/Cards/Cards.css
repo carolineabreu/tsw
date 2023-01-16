@@ -2,6 +2,7 @@
     padding: 10px;
     background: #fff;
   }
+  
   .card-title {
     text-align: center;
     color: #2c423f;
@@ -70,7 +71,7 @@
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    background-color:  #40614C;
+    background-color: #867E32;
     box-sizing: border-box;
     border-radius: 10px;
   }
@@ -104,16 +105,24 @@
     line-height: 24px;
   }
   
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1280px) {
     .content-blog-container {
       width: 84%;
     }
   }
   
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     .cards-items {
-      display: flex;
-      
+      display: flex; 
+    }
+
+    .card-title {
+      /* text-align: center; */
+      /* color: #2c423f; */
+      font-size:2rem;
+      padding: 20px 50px 0px 50px;
+      /* font-weight: bold; */
+      /* padding:20px 20px 20px 20px; */
     }
   }
   
@@ -121,6 +130,7 @@
       .cards-item {
         margin-bottom: 1rem;
       }
+
     .cards-item-text  {
       color: #252e48;
       font-size: 1rem;

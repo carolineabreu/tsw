@@ -3,12 +3,12 @@ import 'antd/dist/antd.min.css';
 import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import { EditPage } from "./pages/Comments/edit";
+// import { EditPage } from "./pages/Comments/edit";
 import { CountryList } from "./pages/CountryList/CountryList";
 import countries from "./data";
 import { CountryInfo } from "./pages/CountryInfo/CountryInfo";
 import { SignUp } from "./pages/SignUp";
-import { Comment } from "./pages/Comments/index";
+import { Comment } from "./pages/Comment/Comment";
 import Us from "./pages/AboutUs/Us";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/comments" element={<Comment />} />
-        <Route path="/:id" element={<EditPage />} />
+        {/* <Route path="/:id" element={<EditPage />} /> */}
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/about-us" element={<Us />} />
 
