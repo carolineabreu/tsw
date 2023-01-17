@@ -1,7 +1,7 @@
 .hero {
   background: url("/src/images/irelandlandscape.jpg") center center/cover
     no-repeat;
-  min-height: 100vh;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  text-size-adjust: 100%;
 }
 
 .hero__block {
