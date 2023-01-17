@@ -1,0 +1,63 @@
+.EditDelete { 
+    /* background-image: url("./waterfal.jpg"); */
+    background-size: cover;  
+    size: large;
+    text-align: center;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  
+  #btn {
+    border-color: #000204;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    width: 90px;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    border-radius: 5%;
+    
+  }
+  
+  #btnDelete {
+    border-color: #000204;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    width: 90px;
+    box-shadow: 0 0 40px 40px #ed0202 inset, 0 0 0 0 #ed0202;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    border-radius: 5%;
+    
+  }
+  
+  #edith1{
+    color: rgb(0, 0, 0);
+    margin-top: 4px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  
+  #formEdit{
+    width: 55%;
+    text-align: center;
+    margin-left: 22%;
+    margin-right: 12%;
+    border-width: 4em;
+    background-color: rgb(121, 171, 121);
+    margin-bottom: 30px;
+    padding-bottom:35px;
+    padding-top:35px;
+    color: black;
+    border: 50px;
+    font-weight: bolder;
+    gap: 2px;
+    border-radius: 40px;
+    border-width: 3cm;
+    border-color: black;
+    }
+  
+    .buttonsEdit {
+      padding-top: 20px;;
+    }

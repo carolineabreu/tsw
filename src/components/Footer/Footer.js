@@ -57,7 +57,7 @@ function Footer() {
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               TSW
-              <i className='fa-solid fa-solid fa-plane' />
+              <i className='fa-solid fa-plane' />
             </Link>
           </div>
           <small className='website-rights'>TSW © 2022</small>

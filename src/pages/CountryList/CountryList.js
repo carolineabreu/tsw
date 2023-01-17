@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./CountryList.module.css";
+import style from "./style.module.css";
 import CardItem from "./CountryCard";
 
 export function CountryList(countries) {
