@@ -1,22 +1,22 @@
 .comment__container {
-  background-color: #e6eeeb;
+  background-color: white;
   /* padding-bottom: 50px; */
   min-height: 100vh;
 }
 
 .comment__heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   color: black;
   padding-top: 1rem;
   font-weight: bold;
   /* padding-bottom: 20px; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .comment__flex {
   display: flex;
-justify-content: center;  /* gap: 20px; */
+  justify-content: center; /* gap: 20px; */
   /* margin-left: 1.25rem; */
   resize: both;
 }
@@ -60,7 +60,7 @@ justify-content: center;  /* gap: 20px; */
   border-radius: 15px;
   float: right;
   position: relative;
-width: 80vh;
+  width: 80vh;
   border-radius: 10px;
   text-align: center;
   flex-grow: 1;
@@ -92,28 +92,28 @@ width: 80vh;
   /* padding-bottom: 3px; */
   /* border-radius: 4px; */
 
-    /* position: relative; */
-    /* width: 100%; */
-    height: 40px;
-    border: none;
-    outline: none;
-    padding: 5px 15px;
-    /* background:linear-gradient(315deg,#e91e63,#5d02ff) ; */
-    color: #fff;
-    font-size: 18px;
-    border-radius: 10px;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  /* background:linear-gradient(315deg,#e91e63,#5d02ff) ; */
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 .form__btn {
-   border-color: #000204;
-   color: rgb(0, 0, 0);
-   font-size: large;
-   width: 90px;
-   box-shadow: 0 0 40px 40px gray inset, 0 0 0 0 lightgray;
-   -webkit-transition: all 150ms ease-in-out;
-   transition: all 150ms ease-in-out;
-   border-radius: 5%;
- }
+  border-color: #000204;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  width: 90px;
+  box-shadow: 0 0 40px 40px gray inset, 0 0 0 0 lightgray;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  border-radius: 5%;
+}
 
 /* #btnDelete {
    border-color: #000204;
@@ -145,8 +145,6 @@ width: 80vh;
 
   .form {
     width: 80vw;
-
- 
   }
 
   .form__heading {

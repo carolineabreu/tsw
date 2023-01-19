@@ -63,7 +63,7 @@ export function CountryInfo({ countries }) {
               <p><strong>Currency: </strong>{country[0].infos.countryCurrency}</p>
               <p><strong>Population: </strong>{country[0].infos.population}</p>
             </div>
-            <div>
+            <div className={style.info2}>
               <p><strong>Climate: </strong>{country[0].infos.climate}</p>
               <p><strong>When to go: </strong>{country[0].tips.whenToGo}</p>
             </div>
