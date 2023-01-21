@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import style from "./CountryInfo.module.css";
-import { Carousel, Image } from 'grommet';
-import { Box, Card, CardBody, Text } from 'grommet';
+import { Carousel, Image } from "grommet";
+import { Box, Card, CardBody, Text } from "grommet";
 // import axios from "axios";
 // import { useEffect, useState, Link } from "react";
 
@@ -29,6 +29,7 @@ export function CountryInfo({ countries }) {
   //   }
   //   fetchComments();
   // }, []);
+
   return (
     <div className={style.container}>
       <div>
@@ -51,21 +52,37 @@ export function CountryInfo({ countries }) {
             <div className={style.info1}>
               <strong>Language: </strong>
               {country[0].infos.language.map((currentLanguage) => {
-                return (
-                  <span>{currentLanguage}</span>
-                );
+                return <span>{currentLanguage}</span>;
               })}
 
-              <p><strong>Capital: </strong>{country[0].infos.capital}</p>
-              <p><strong>Continent: </strong>{country[0].infos.continent}</p>
+              <p>
+                <strong>Capital: </strong>
+                {country[0].infos.capital}
+              </p>
+              <p>
+                <strong>Continent: </strong>
+                {country[0].infos.continent}
+              </p>
             </div>
             <div className={style.info2}>
-              <p><strong>Currency: </strong>{country[0].infos.countryCurrency}</p>
-              <p><strong>Population: </strong>{country[0].infos.population}</p>
+              <p>
+                <strong>Currency: </strong>
+                {country[0].infos.countryCurrency}
+              </p>
+              <p>
+                <strong>Population: </strong>
+                {country[0].infos.population}
+              </p>
             </div>
             <div className={style.info2}>
-              <p><strong>Climate: </strong>{country[0].infos.climate}</p>
-              <p><strong>When to go: </strong>{country[0].tips.whenToGo}</p>
+              <p>
+                <strong>Climate: </strong>
+                {country[0].infos.climate}
+              </p>
+              <p>
+                <strong>When to go: </strong>
+                {country[0].tips.whenToGo}
+              </p>
             </div>
           </div>
 
@@ -81,7 +98,8 @@ export function CountryInfo({ countries }) {
                       return (
                         <ul className="cardUl">
                           <li>{currentFact}</li>
-                        </ul>);
+                        </ul>
+                      );
                     })}
                   </Text>
                 </Box>
@@ -89,9 +107,7 @@ export function CountryInfo({ countries }) {
             </CardBody>
           </Card>
 
-
           <div className={style.tips}>
-
             <Card className={style.card} width="350px">
               <CardBody>
                 <Box direction="row" gap="small">
@@ -104,7 +120,8 @@ export function CountryInfo({ countries }) {
                         return (
                           <ul className="cardUl">
                             <li>{currentCity}</li>
-                          </ul>);
+                          </ul>
+                        );
                       })}
                     </Text>
                   </Box>
@@ -124,16 +141,19 @@ export function CountryInfo({ countries }) {
                         return (
                           <ul className="cardUl">
                             <li>{currentActivity}</li>
-                          </ul>);
+                          </ul>
+                        );
                       })}
                     </Text>
                   </Box>
                 </Box>
               </CardBody>
             </Card>
-
           </div>
-          <p>*Score based on <a href="https://geosureglobal.com/">GeoSure</a> Women's Safety.</p>
+          <p>
+            *Score based on <a href="https://geosureglobal.com/">GeoSure</a>{" "}
+            Women's Safety.
+          </p>
         </div>
       </div>
       {/* <div>

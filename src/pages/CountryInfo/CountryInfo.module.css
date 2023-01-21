@@ -1,69 +1,65 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .cardUl {
   list-style: square;
 }
 
 .container {
-  background-color: #e4f2f7;
-  
+  background-color: #ebf6f5;
 }
 
 .cover {
-  width: 60vw;
+  display: flex;
+  justify-content: center;
   height: auto;
+  width: 92%;
+  margin-left: 15%;
+  max-width: 70%;
   object-fit: cover;
-  padding-left: 50px;
+  padding: 0px 0px;
 }
 
 .tips {
   display: flex;
+  flex-direction: row;
 }
 
 ul {
   padding: 0;
-  margin: 5px;
 }
 
 li {
-  padding: 5px;
+  padding: 3px;
+  color: black;
 }
 
 .box {
   padding: 10px;
-  margin: 0px 20px;
-  
+  /* margin: 0px 20px; */
 }
 
 .info {
-  /* width: 80vh; */
   display: flex;
   flex-direction: column;
-  /* padding: 5px 50px; */
-  font-family: 'Karla', sans-serif;
-  /* width: 50vw; */
+  align-items: center;
+  font-family: "Karla", sans-serif;
 }
 
 .infoAbout {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 0px 20px;
 }
 
 .card {
   margin: 10px 10px 10px 0px;
   padding: 10px;
-  /* margin:10px 20px 10px 20px; */
   background-color: whitesmoke;
-  
 }
 
 .title {
-  margin: 0 50px;
-  text-align: left;
-  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
+  padding-top: 20px;
 }
 
 span {
@@ -75,39 +71,30 @@ span {
   font-size: 0.98rem;
 }
 
-.info1,
+.info1 {
+  padding: 10px 30px;
+  padding-left: 10px;
+}
+
 .info2 {
-  /* padding-right: 50px; */
-  padding: 10px 20px;
+  padding: 10px 30px;
   padding-left: 0px;
 }
 
-span {
-  margin-left: 5px;
-}
-
-p,
 strong {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  color: #5cbdb9;
 }
 
-@media only screen and (min-width: 768px) {
-  .info {
-    /* width: 100vh; */
-    display: flex;
-    flex-direction: column;
-    padding: 5px 50px;
-    font-family: 'Karla', sans-serif;
-    /* width: 50vw; */
+@media (min-width: 320px) and (max-width: 768px) {
+  .cover {
+    width: auto;
+    height: auto;
+    /* object-fit: cover; */
   }
 
-  .info2 {
-    display: flex;
-    flex-direction: row;
-  }
-  
   .infoAbout {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
+
+
 }

@@ -1,16 +1,13 @@
 * {
-font-family: 'Fira Sans Extra Condensed', sans-serif;;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 .navbar {
-  background: #2c423f;
-  color: white;
-  /* height: 70px; */
+  background: rgb(255, 255, 255);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* font-size: 1.2rem; */
   position: sticky;
   top: 0;
   z-index: 99;
@@ -25,7 +22,7 @@ font-family: 'Fira Sans Extra Condensed', sans-serif;;
 }
 
 .navbar-box {
-  color: white;
+  color: #5cbdb9;
   cursor: pointer;
   text-decoration: none;
   font-size: 2.4rem;
@@ -33,97 +30,97 @@ font-family: 'Fira Sans Extra Condensed', sans-serif;;
   align-items: center;
   padding-top: 16px;
   padding-left: 30px;
-    /* justify-content: flex-end; */
-
 }
+
 .navbar-box:hover {
-  color:#40615c;
+  color: #18b9b4;
   transition: all 0.2s ease-out;
-
 }
+
 .navbar-logo {
-  color: white;
-  font-family: 'Amatic SC', cursive;
-  
+  color: #5cbdb9;
+  font-family: "Amatic SC", cursive;
 }
 
 .navbar-logo:hover {
-  color: #40615c;
+  color: #24b7b2;
   transition: all 0.2s ease-out;
-   transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .plane {
   padding-bottom: 12px;
   font-size: 1.2rem;
- color: white;
- transform: rotate(-25deg);
+  color: #5cbdb9;
+  transform: rotate(-25deg);
+}
+
+.plane:hover {
+  color: #18b7b2;
+  transition: all 0.2s ease-out;
+  transform: scale(1.2);
 }
 
 .fa-bars {
-  color: white;
+  color: #5cbdb9;
   font-size: 1.8rem;
 }
 
 .fa-x {
-  color: white;
-  font-size: 1.8rem;
+  color: #5cbdb9;
+  font-size: 2rem;
 }
 
 .nav-item {
   display: inline-block;
-/* padding-top:10px; */
-/* font-family: "Dancing Script", sans-serif; */
 }
 
 .nav-list-btn {
   display: block;
   justify-content: center;
   text-align: center;
-  /* margin: 2rem auto; */
-  border-radius: 4px;
-  /* width: 80%; */
+  border-radius: 20px;
   text-decoration: none;
   font-size: 1.5rem;
   background-color: transparent;
   color: #fff;
   padding: 10px 20px;
-  /* border: 1px solid #fff; */
   transition: all 0.3s ease-out;
 }
 
 .btn-nav {
-  background-color:#40615c;
+  background-color: #b484a8;
   color: white;
   font-size: 1rem;
+  border-radius: 20px;
+  border: none;
   padding: 4px 10px;
   margin-right: 20px;
 }
 
 .btn-nav:hover {
   transition: all 0.2s ease-out;
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .nav-list {
-  color: #fff;
+  color: #5cbdb9;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-font-family: 'Fira Sans Extra Condensed', sans-serif;  /* padding-right: 30px 0px 0px 0px; */
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 .nav-list:hover {
-text-decoration: underline white;
-color: white;
-transition: all 0.2s ease-out;
- /* transform: scale(1);  */
+  text-decoration: underline #18b9b4;
+  color: #18b9b4;
+  /* transition: all 0.2s ease-out; */
+  transform: scale(1.2);
 }
 
 .nav-menu {
   display: block;
   grid-template-columns: repeat(4, auto);
-  /* grid-gap: 20px; */
   padding-top: 15px;
 }
 
@@ -135,7 +132,7 @@ transition: all 0.2s ease-out;
   display: none;
 }
 
-@media screen and (min-device-width:320px) and (max-width: 768px) {
+@media screen and (min-device-width: 320px) and (max-width: 768px) {
   .navbar {
     width: 100%;
     justify-content: flex-start;
@@ -155,7 +152,7 @@ transition: all 0.2s ease-out;
   }
 
   .nav-menu.active {
-    background: #99B2AF;
+    background: #ebf6f5;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -171,9 +168,8 @@ transition: all 0.2s ease-out;
 
   .nav-list:hover {
     background-color: #fff;
-    color: #242424;
+    color: #18b1ac;
     border-radius: 0;
-
   }
 
   .menu-icon {
@@ -187,17 +183,17 @@ transition: all 0.2s ease-out;
   }
 
   .fa-times {
-    color: #fff;
+    color: #5cbdb9;
     font-size: 2rem;
   }
 
   .fa-bars {
-    color: white;
+    color: #5cbdb9;
     font-size: 1.6rem;
   }
 
   .navbar-box {
-    color: white;
+    color: #5cbdb9;
     margin-left: 20px;
     padding-top: 15px;
     cursor: pointer;
@@ -215,7 +211,4 @@ transition: all 0.2s ease-out;
   .btn-nav {
     padding: 6px 16px;
   }
-
-
-
 }
