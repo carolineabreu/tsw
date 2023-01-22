@@ -13,23 +13,6 @@ export function CountryInfo({ countries }) {
 
   console.log(country);
 
-  // const [comments, setComments] = useState([""]);
-
-  // useEffect(() => {
-  //   async function fetchComments() {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://ironrest.herokuapp.com/tswcomments"
-  //       );
-
-  //       setComments([...response.data]);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   }
-  //   fetchComments();
-  // }, []);
-
   return (
     <div className={style.container}>
       <div>
@@ -50,11 +33,12 @@ export function CountryInfo({ countries }) {
 
           <div className={style.containerInfo}>
             <div className={style.info1}>
-              <strong>Language: </strong>
-              {country[0].infos.language.map((currentLanguage) => {
-                return <span>{currentLanguage}</span>;
-              })}
-
+              <p>
+                <strong>Language: </strong>
+                {country[0].infos.language.map((currentLanguage) => {
+                  return <ul>{currentLanguage}</ul>;
+                })}
+              </p>
               <p>
                 <strong>Capital: </strong>
                 {country[0].infos.capital}
@@ -74,7 +58,7 @@ export function CountryInfo({ countries }) {
                 {country[0].infos.population}
               </p>
             </div>
-            <div className={style.info2}>
+            <div className={style.info3}>
               <p>
                 <strong>Climate: </strong>
                 {country[0].infos.climate}
@@ -86,11 +70,16 @@ export function CountryInfo({ countries }) {
             </div>
           </div>
 
-          <Card className={style.card} width="640px">
+          <Card className={style.card} max-width="540px">
             <CardBody>
               <Box direction="row" gap="small">
                 <Box className={style.box}>
-                  <Text color="text-strong" size="large" weight="bold">
+                  <Text
+                    className={style.color}
+                    color="text-strong"
+                    size="large"
+                    weight="bold"
+                  >
                     Facts:
                   </Text>
                   <Text color="text-strong">
@@ -108,11 +97,16 @@ export function CountryInfo({ countries }) {
           </Card>
 
           <div className={style.tips}>
-            <Card className={style.card} width="350px">
+            <Card className={style.card} max-width="540px">
               <CardBody>
                 <Box direction="row" gap="small">
                   <Box className={style.box}>
-                    <Text color="text-strong" size="large" weight="bold">
+                    <Text
+                      className={style.color}
+                      color="text-strong"
+                      size="large"
+                      weight="bold"
+                    >
                       Best Cities*
                     </Text>
                     <Text color="text-strong">
@@ -129,11 +123,16 @@ export function CountryInfo({ countries }) {
               </CardBody>
             </Card>
 
-            <Card className={style.card} width="350px">
+            <Card className={style.card} max-width="540px">
               <CardBody>
                 <Box direction="row" gap="small">
                   <Box className={style.box}>
-                    <Text color="text-strong" size="large" weight="bold">
+                    <Text
+                      className={style.color}
+                      color="text-strong"
+                      size="large"
+                      weight="bold"
+                    >
                       Activities
                     </Text>
                     <Text color="text-strong">
