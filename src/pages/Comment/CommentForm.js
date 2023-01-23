@@ -39,32 +39,32 @@ export function CommentForm () {
 
   return (
     <div className="form">
-      <h1 className="form__heading"> Share your Experience</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="form-heading"> Share your Experience</h1>
+      <form className= "form-head" onSubmit={handleSubmit}>
         {" "}
-        <label htmlFor="form__title">Title</label>{" "}
+        <label htmlFor="form-title">Title</label>{" "}
         <p>
           {" "}
           <input
-            className="form__title"
+            className="form-title"
             name="title"
             type="text"
             value={form.title}
             onChange={handleChange}
           />
         </p>{" "}
-        <label htmlFor="form__image">Image Link</label>
+        <label htmlFor="form-image">Image Link</label>
         <p>
           {" "}
           <input
-            className="form__image"
+            className="form-image"
             name="image"
             type="text"
             value={form.image}
             onChange={handleChange}
           />
         </p>{" "}
-        <label htmlFor="form__ranking">Rate</label>
+        <label htmlFor="form-ranking">Rate</label>
         <p>
           {" "}
           {/* <StarRating
@@ -74,40 +74,40 @@ export function CommentForm () {
             onChange={handleChange}
           /> */}
         </p>{" "}
-        <label htmlFor="form__description">Describe your Experience</label>
+        <label htmlFor="form-description">Describe your Experience</label>
         <p>
           {" "}
           <input
-            className="form__description"
+            className="form-description"
             name="description"
             type="text"
             value={form.description}
             onChange={handleChange}
           />
         </p>{" "}
-        <label htmlFor="form__date">Date</label>
+        <label htmlFor="form-date">Date</label>
         <p>
           {" "}
           <input
-            className="form__date"
+            className="form-date"
             name="date"
             type="text"
             value={form.date}
             onChange={handleChange}
           />
         </p>{" "}
-        <label htmlFor="form__name">Your Name:</label>
+        <label htmlFor="form-name">Your Name</label>
         <p>
           {" "}
           <input
-            className="form__name"
+            className="form-name"
             name="name"
             type="text"
             value={form.name}
             onChange={handleChange}
           />
         </p>
-        <button type="submit" className="form__btn">
+        <button type="submit" className="form-btn">
           Send
         </button>
       </form>

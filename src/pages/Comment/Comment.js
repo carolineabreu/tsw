@@ -33,16 +33,16 @@ export function Comment () {
 
   return (
     <>
-      <div className="comment__container">
+      <div className="comment-container">
         {/* <button type="button" id="btn">Back</button> */}
-        <h1 className="comment__heading">Testimonial</h1>
-        <div className="comment__flex">
-          <div className="comment__flex-item">
+        <h1 className="comment-heading">Comments</h1>
+        <div className="comment-flex">
+          <div className="comment-flex-item">
             {comments.map((currentComment) => {
               return (
-                <div className="comment__id">
+                <div className="id-comment">
                   <Link to={`/${currentComment._id}`}>
-                    <h2 className='comment__current'>{currentComment.title}</h2>
+                    <h2 className='comment-current'>{currentComment.title}</h2>
                     <img src={currentComment.image} alt={currentComment.name} />
                     <p>{currentComment.ranking}</p>
                     <p>{currentComment.description}</p>
