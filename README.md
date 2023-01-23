@@ -1,6 +1,6 @@
 # [TSW - Travel Safety for Woman](https://tsw.netlify.app/)
 
-![image](./src/images/main%20page.png)
+![image](./src/images/main-page.png)
 ![image](./src/images/desktop-size.png)
 
 Project made for the second project of IronHack's Web Development Bootcamp São Paulo - Remote.
