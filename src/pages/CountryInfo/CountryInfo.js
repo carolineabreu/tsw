@@ -70,7 +70,7 @@ export function CountryInfo({ countries }) {
             </div>
           </div>
 
-          <Card className={style.card} max-width="540px">
+          <Card className={style.card} max-width="500px">
             <CardBody>
               <Box direction="row" gap="small">
                 <Box className={style.box}>
@@ -97,7 +97,7 @@ export function CountryInfo({ countries }) {
           </Card>
 
           <div className={style.tips}>
-            <Card className={style.card} max-width="540px">
+            <Card className={style.card2} max-width="250px">
               <CardBody>
                 <Box direction="row" gap="small">
                   <Box className={style.box}>
@@ -123,7 +123,7 @@ export function CountryInfo({ countries }) {
               </CardBody>
             </Card>
 
-            <Card className={style.card} max-width="540px">
+            <Card className={style.card2} max-width="250px">
               <CardBody>
                 <Box direction="row" gap="small">
                   <Box className={style.box}>
@@ -149,6 +149,7 @@ export function CountryInfo({ countries }) {
               </CardBody>
             </Card>
           </div>
+        
           <p>
             *Score based on <a href="https://geosureglobal.com/">GeoSure</a>{" "}
             Women's Safety.
