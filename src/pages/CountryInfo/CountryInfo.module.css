@@ -37,8 +37,12 @@ ul {
 li {
   padding: 3px;
   color: black;
-  list-style-type: square;
+  list-style-type: none;
   padding-top: 10px;
+}
+
+ul li {
+  list-style-type: square;
 }
 
 /* a {

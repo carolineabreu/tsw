@@ -39,7 +39,7 @@ function Navbar() {
               <Link to="/comments"
                 className="nav-list"
                 onClick={closeMobileMenu}>
-                Testimonial
+                Comments
               </Link>
             </li>
             <li className="nav-item">
