@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.home,
+/* .home,
 .comments,
 .sign-up {
   display: flex;
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-}
+} */
 
 .comments {
   background-position: center;
@@ -30,10 +30,10 @@
   font-size: 100px;
 } */
 
-.sign-up {
+/* .sign-up {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */

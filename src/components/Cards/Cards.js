@@ -1,5 +1,5 @@
 import CardItem from './CardItem';
-import "../../components/Cards/Cards.css"
+import "./Cards.css"
 import images from "../../images/ireland2.jpg";
 import images2 from "../../images/iceland1.jpg";
 import images3 from "../../images/sweden1.jpg";
@@ -9,7 +9,7 @@ import images5 from "../../images/swiss.jpg";
 function Cards() {
   return (
     <div className="cards">
-      <h1>Top 5 safest countries for solo female travallers</h1>
+      <h1 className="card-title">Top 5 safest countries for solo female travallers</h1>
       <div className="cards-containers">
         <div className='cards-wrapper'>
           <ul className='cards-items'>
