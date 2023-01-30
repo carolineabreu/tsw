@@ -32,7 +32,7 @@ export function SignUp() {
           <input className={style.signUpInput} type="password" id="confirmPassword"  />
         </div>
       
-        <button onClick={refreshPage} class={style.signUpBtn}>Register</button>
+        <button onClick={refreshPage} className={style.signUpBtn}>Register</button>
         </form>
     </div>
   );
