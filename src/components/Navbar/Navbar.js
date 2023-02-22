@@ -14,51 +14,51 @@ function Navbar() {
 
   return (
     <>
-  <nav className="navbar">
-      <div className="navbar-main">
+      <nav className="navbar">
+        <div className="navbar-main">
           <Link to='/' className='navbar-box' onClick={closeMobileMenu}>
-            <h1 className='navbar-logo' > TSW </h1> 
-            
+            <h1 className='navbar-logo' > TSW </h1>
+
             <div className='plane'>
-            <i className="fa-solid fa-plane" />
+              <i className="fa-solid fa-plane" />
             </div>
+          </Link>
+        </div>
+
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fa-solid fa-x" : "fas fa-bars"} />
+        </div>
+
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-list" onClick={closeMobileMenu}>
+              Home
             </Link>
-            </div>
-
-            <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fa-solid fa-x" : "fas fa-bars"} />
-          </div>
-
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-list" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/comments"
-                className="nav-list"
-                onClick={closeMobileMenu}>
-                Comments
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="country-list"
-                className="nav-list"
-                onClick={closeMobileMenu}>
-                Country List
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to='/sign-up'
-                className='nav-list-btn'
-                onClick={closeMobileMenu}>
-                {button && <button className='btn-nav'  >SIGN UP</button>}
-              </Link>
-            </li>
-          </ul>
-  </nav>
+          </li>
+          <li className="nav-item">
+            <Link to="/comments"
+              className="nav-list"
+              onClick={closeMobileMenu}>
+              Comments
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="country-list"
+              className="nav-list"
+              onClick={closeMobileMenu}>
+              Country List
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to='/signup'
+              className='nav-list-btn'
+              onClick={closeMobileMenu}>
+              {button && <button className='btn-nav'  >SIGN UP</button>}
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
