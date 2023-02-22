@@ -1,10 +1,9 @@
-import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { StarRating } from "./star";
-import "antd/dist/antd.css"; 
 
-export function CommentForm () {
+export function CommentForm() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -40,7 +39,7 @@ export function CommentForm () {
   return (
     <div className="form">
       <h1 className="form-heading"> Share your Experience</h1>
-      <form className= "form-head" onSubmit={handleSubmit}>
+      <form className="form-head" onSubmit={handleSubmit}>
         {" "}
         <label htmlFor="form-title">Title</label>{" "}
         <p>
