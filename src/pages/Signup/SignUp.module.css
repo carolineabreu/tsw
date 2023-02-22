@@ -8,6 +8,10 @@
 }
 
 .signUpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   width: 400px;
   border-radius: 8px;
@@ -79,7 +83,7 @@
   transform: translateY(-2px);
 }
 
-.signUpInput:focus + .signUpLabel {
+.signUpInput:focus+.signUpLabel {
   top: -7px;
   left: 3px;
   z-index: 10;
@@ -92,12 +96,16 @@
   border: 2px solid #40615c;
 }
 
-.signUpInput:not(:placeholder-shown) + .signUpLabel {
+.signUpInput:not(:placeholder-shown)+.signUpLabel {
   top: -7px;
   left: 3px;
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
+}
+
+::placeholder {
+  color: #b484a8;
 }
 
 @media screen and (min-device-width: 320px) and (max-width: 768px) {
@@ -129,7 +137,7 @@
 
   .signUpLabel {
     position: absolute;
-    
+
     padding: 0 4px;
     background-color: white;
     color: #dadce0;
