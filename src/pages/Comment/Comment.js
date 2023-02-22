@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import { CommentForm } from "./CommentForm";
-import 'antd/dist/antd.min.css'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Comment.css";
+import { CommentForm } from "./CommentForm";
 
-export function Comment () {
+export function Comment() {
   const [comments, setComments] = useState([]);
-// const useHistory = useHistory( );
+  // const useHistory = useHistory( );
 
   // const handleClick = (e ) =>
   //   e.preventDefault( );
