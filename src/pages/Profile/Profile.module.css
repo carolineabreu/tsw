@@ -1,0 +1,38 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebf6f5;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.userName {
+  display: flex;
+  align-items: first baseline;
+  gap: 20px;
+}
+
+
+.btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn button {
+  background-color: #b484a8;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 15px;
+}
