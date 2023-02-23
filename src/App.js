@@ -8,6 +8,7 @@ import { Comment } from "./pages/Comment/Comment";
 import { CountryInfo } from "./pages/CountryInfo/CountryInfo";
 import { CountryList } from "./pages/CountryList/CountryList";
 import Home from "./pages/Home/Home";
+import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
 
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/comments" element={<Comment />} />
         <Route path="/about-us" element={<Us />} />
 

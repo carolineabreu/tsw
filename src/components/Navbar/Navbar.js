@@ -51,6 +51,14 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
+              to='/login'
+              className='nav-list-btn'
+              onClick={closeMobileMenu}>
+              {button && <button className='btn-nav'  >LOGIN</button>}
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
               to='/signup'
               className='nav-list-btn'
               onClick={closeMobileMenu}>

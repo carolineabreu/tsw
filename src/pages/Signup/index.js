@@ -34,7 +34,7 @@ export function Signup() {
       }
     } else {
       //melhorar mensagem e estilizar toast
-      toast.error("Password don't match!");
+      toast.error("Password doesn't match!");
     }
   }
 
