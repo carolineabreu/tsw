@@ -84,7 +84,7 @@
   font-size: 1.5rem;
   background-color: transparent;
   color: #fff;
-  padding: 10px 20px;
+  margin-left: 20px;
   transition: all 0.3s ease-out;
 }
 
@@ -95,7 +95,6 @@
   border-radius: 20px;
   border: none;
   padding: 4px 10px;
-  margin-right: 20px;
 }
 
 .btn-nav:hover {
@@ -103,13 +102,14 @@
   transform: scale(1.2);
 }
 
+
 .nav-list {
   color: #5cbdb9;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  padding-left: 20px;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  margin-left: 20px;
 }
 
 .nav-list:hover {
@@ -119,10 +119,12 @@
   /* transform: scale(1.2); */
 }
 
+
 .nav-menu {
   display: block;
   grid-template-columns: repeat(4, auto);
   padding-top: 15px;
+  margin-right: 20px;
 }
 
 .menu-icon {
@@ -132,6 +134,7 @@
 .nav-list-mobile {
   display: none;
 }
+
 
 @media screen and (min-device-width: 320px) and (max-width: 768px) {
   .navbar {
