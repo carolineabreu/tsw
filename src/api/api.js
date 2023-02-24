@@ -1,11 +1,13 @@
 import axios from "axios";
 
-const apiURLs = {
-  development: "http://localhost:4000",
-  production: "https://tsw-api.cyclic.app",
-};
+// const apiURLs = {
+//   development: "http://localhost:4000",
+//   production: "https://tsw-api.cyclic.app",
+// };
 
-const api = axios.create({ baseURL: apiURLs[process.env.NODE_ENV] });
+const apiURLs = "https://tsw-api.cyclic.app";
+
+const api = axios.create({ baseURL: apiURLs });
 
 api.interceptors.request.use((config) => {
   const loggedInUserJSON = localStorage.getItem("loggedInUser");
