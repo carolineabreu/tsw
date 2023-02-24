@@ -54,7 +54,7 @@ export function Profile() {
             </div>
           </div>
           <Divider></Divider>
-          <ProfileTabs isLoading={isLoading} setIsLoading={setIsLoading} />
+          <ProfileTabs />
         </div>
       ) : <div className={style.loading}>
         <CircularProgress color="secondary" />

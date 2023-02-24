@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 
 
-export function SavedCountries(props) {
+export function SavedCountries() {
   const [countries, setCountries] = useState([]);
+
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchLikes() {
@@ -14,7 +16,7 @@ export function SavedCountries(props) {
         const response = await api.get("/user/savedCountries");
 
         setCountries(response.data);
-        props.setIsLoading(false);
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -24,7 +26,7 @@ export function SavedCountries(props) {
 
   return (
     <div>
-      {!props.isLoading ? (
+      {!isLoading ? (
         countries.length ? (
           countries.map((currentReview) => {
             return (

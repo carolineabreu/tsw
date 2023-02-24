@@ -61,13 +61,13 @@ export function ProfileTabs(props) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0} >
-        <AllReviews isLoading={props.isLoading} setIsLoading={props.setIsLoading} />
+        <AllReviews />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <AllLikes isLoading={props.isLoading} setIsLoading={props.setIsLoading} />
+        <AllLikes />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <SavedCountries isLoading={props.isLoading} setIsLoading={props.setIsLoading} />
+        <SavedCountries />
       </TabPanel>
     </Box>
   );
