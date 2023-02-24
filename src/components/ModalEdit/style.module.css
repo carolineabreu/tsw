@@ -1,0 +1,57 @@
+input {
+  width: 70%;
+  height: 40px;
+  border-color: rgb(49, 136, 126);
+  outline: none;
+  padding: 5px 15px;
+  color: #b484a8;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+label {
+  color: #5cbdb9;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #b484a8;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 15px;
+}
+
+.delete {
+  background-color: red;
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnNo {
+  background-color: green;
+}
