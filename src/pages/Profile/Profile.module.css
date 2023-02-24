@@ -49,3 +49,7 @@ p {
   align-items: center;
   padding-top: 200px;
 }
+
+button {
+  cursor: pointer;
+}
