@@ -25,10 +25,9 @@ export function Signup() {
 
     if (form.password === form.confirmPassword) {
       try {
-        const response = await api.post("/user/signup", form);
+        await api.post("/user/signup", form);
 
         navigate("/login");
-        console.log(response);
       } catch (err) {
         console.log(err);
       }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 
 
-export function AllLikes() {
+export function AllLikes(props) {
   const [likes, setLikes] = useState({
     author: {
       username: ""
@@ -16,15 +16,13 @@ export function AllLikes() {
     body: ""
   });
 
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     async function fetchLikes() {
       try {
         const response = await api.get("/review/all-likes");
 
         setLikes(response.data);
-        setIsLoading(false);
+        props.setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -34,7 +32,7 @@ export function AllLikes() {
 
   return (
     <div>
-      {!isLoading ? (
+      {!props.isLoading ? (
         likes.length ? (
           likes.map((currentReview) => {
             return (
