@@ -2,6 +2,7 @@ import { CircularProgress, Divider } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../api/api";
+import { ModalEdit } from "../../components/ModalEdit";
 import { ProfileTabs } from "../../components/ProfileTabs";
 import { AuthContext } from "../../contexts/authContext";
 import style from "./Profile.module.css";
@@ -13,6 +14,13 @@ export function Profile() {
     username: ""
   });
 
+  const [form, setForm] = useState({
+    username: ""
+  });
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,6 +29,7 @@ export function Profile() {
         const response = await api.get("/user/profile");
 
         setUser(response.data);
+        setForm(response.data);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -47,9 +56,9 @@ export function Profile() {
             </div>
             <div className={style.btn}>
               <Link to="/profile">
-                {/**talvez um modal? o que o user vai poder alterar do perfil? */}
-                <button>Edit</button>
+                <button onClick={handleOpen}>Edit</button>
               </Link>
+              <ModalEdit form={form} setForm={setForm} open={open} handleClose={handleClose} />
               <button onClick={handleLogout}>Logout</button>
             </div>
           </div>
