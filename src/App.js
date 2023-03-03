@@ -9,6 +9,7 @@ import Us from "./pages/AboutUs/Us";
 import { Comment } from "./pages/Comment/Comment";
 import { CountryInfo } from "./pages/CountryInfo/CountryInfo";
 import { CountryList } from "./pages/CountryList/CountryList";
+import { CreateCountry } from "./pages/CreateCountry";
 import Home from "./pages/Home/Home";
 import { Login } from "./pages/Login";
 import { Profile } from "./pages/Profile";
@@ -36,6 +37,7 @@ function App() {
             path="/country-list/:id"
             element={<CountryInfo countries={countries} />}
           />
+          <Route path="/country/create" element={<CreateCountry />} />
         </Routes>
         <Toaster />
       </AuthContextComponent>
