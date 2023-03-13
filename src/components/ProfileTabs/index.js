@@ -1,8 +1,8 @@
 import { Box, Tab, Tabs } from "@mui/material";
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { AllLikes } from "./AllLikes";
-import { AllReviews } from "./AllReviews";
+import { Likes } from "./Likes";
+import { ProfileReviews } from "./ProfileReviews";
 import { SavedCountries } from "./SavedCountries";
 
 function TabPanel(props) {
@@ -61,10 +61,10 @@ export function ProfileTabs(props) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0} >
-        <AllReviews />
+        <ProfileReviews />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <AllLikes />
+        <Likes />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <SavedCountries />

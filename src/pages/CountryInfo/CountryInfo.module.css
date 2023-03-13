@@ -1,195 +1,114 @@
-.cardUl {
-  list-style: square;
-}
-
-.container {
+.all {
   background-color: #ebf6f5;
   padding: 0px 40px;
-}
-
-.cover {
-  display: flex;
-  justify-content: center;
-  height: auto;
-  /* width: 92%; */
-  margin-left: 15%;
-  max-width: 70%;
-  object-fit: cover;
-  padding: 0px 0px;
-}
-
-.tips {
-  display: flex;
-  flex-direction: row;
-  resize: both;
-  /* overflow: auto; */
-  max-width: 550px;
-
-  /* border-radius: 10px; */
-  /* padding: 0px; */
-  /* background-color: purple; */
-}
-
-ul {
-  padding: 5px;
-}
-
-li {
-  padding: 3px;
-  color: black;
-  list-style-type: none;
-  padding-top: 10px;
-}
-
-ul li {
-  list-style-type: square;
-}
-
-/* a {
-  color: #5cbdb9;
-} */
-
-.box {
-  /* background-color: aquamarine; */
-  padding: 20px 0px 0px 20px;
-  margin: 0px 45px;
-  /* max-width: 800px; */
-}
-
-.info {
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Karla", sans-serif;
-  /* padding: 0px 20px 0px 20px; */
-  margin: 0px 40px;
 }
 
-.infoAbout {
-  /* background-color: green; */
-  font-size: 1.2rem;
-  /* padding: 20px 50px; */
-  margin: 20px 0px;
-  width: auto;
-}
-
-.card {
-  width: auto;
-  margin: 10px 10px 0px 0px;
-  padding: 10px;
-  /* border-radius: 10px; */
-  width:650px;
-  background-color: whitesmoke;
-}
-
-.card2{
-  margin: 10px 10px 10px 0px;
-background-color: whitesmoke;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1152px;
+  box-sizing: border-box;
+  padding-top: 40px;
 }
 
 .title {
+  font-size: 3.5rem;
+  padding-bottom: 20px;
+}
+
+.containerBottom {
   display: flex;
-  justify-content: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3rem;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about {
   padding-top: 40px;
-  /* background-color: chartreuse; */
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
 }
 
-span {
-  text-decoration: none;
-
-}
-
-.containerInfo {
+.box1 {
   display: flex;
-  justify-content: center;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  height: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box1 span {
+  color: #5cbdb9;
+}
+
+.box2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2Title {
+  color: #5cbdb9;
   font-size: 1rem;
-  max-width: 750px;
-  flex-grow: 1;
-  margin: auto;
-  flex-direction: row;
-  /* padding: 10px 40px; */
-  /* background-color: blueviolet; */
 }
 
-.info1 {
-  padding: 10px 20px;
-  padding-left: 10px;
+.box2Body {
+  font-size: 1.2rem;
 }
 
-.info2 {
-  padding: 10px 30px;
-  padding-right: 0px;
+.facts,
+.cities,
+.activities {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  font-weight: 900;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.info3 {
-  padding: 10px 40px;
-  padding-right: 0px;
+.factsList,
+.citiesList,
+.activitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-strong {
-  /* background-color: aliceblue; */
+.facts ul,
+.cities ul,
+.activities ul {
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.facts li,
+.cities li,
+.activities li {
+  font-size: 1.1rem;
+  list-style: square inside;
+}
+
+.box3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cities,
+.activities {
+  width: 48%;
+}
+
+.footer {
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.footer a {
   color: #5cbdb9;
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.color {
-  color: #5cbdb9;
-}
-
-@media (min-width: 320px) and (max-width: 768px) {
-  .cover {
-    width: auto;
-    height: auto;
-  }
-
-  .CountryInfo_containerInfo {
-    display: flex;
-    flex-direction: column;
-    line-height: 20px;
-  }
-
-
-
-  .info1 {
-    padding-left: 0px;
-  }
-
-  .title {
-    padding: 20px 0px 0px 10px;
-  }
-
-  .info2 {
-    padding: 10px 15px 0px 0px;
-    /* margin-right: 50px; */
-  }
-
-  .info3 {
-    padding: 10px 0px;
-  }
-
-  .infoAbout {
-    /* font-size: 1rem; */
-    padding: 10px 8px;
-  }
-
-  /* p {
-    padding-right: 40px;
-  } */
-
-  .countryInfo_card {
-    width: auto;
-  }
-
-  .tips {
-    display: flex;
-    width: 400px;
-    flex-direction: row;
-    resize: both;
-    overflow: auto;
-    margin: 10px 0px;
-  }
 }
