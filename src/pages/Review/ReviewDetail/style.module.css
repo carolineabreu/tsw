@@ -1,0 +1,76 @@
+.container {
+  background-color: #ebf6f5;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.containerCard {
+  height: 70vh;
+  width: 45vw;
+  background-color: #fff;
+  margin-top: 40px;
+  align-self: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  padding: 32px;
+}
+
+.containerBody {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border: 0.5px solid #b484a8;
+  margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.containerBody img {
+  width: 60%;
+}
+
+.containerBodyInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+  padding-top: 10px;
+}
+
+.usernameDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.rateTile {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.countryDate {
+  padding-bottom: 8px;
+}
+
+.countryLink {
+  text-decoration: none;
+  color: #b484a8;
+  font-weight: bold;
+}
+
+.containerBodyInfo .rate {
+  color: #40615c;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.delete {
+  margin-right: 5px;
+  margin-left: 5px;
+}

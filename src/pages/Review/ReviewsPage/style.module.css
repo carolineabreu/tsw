@@ -1,0 +1,29 @@
+.components {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 30px;
+}
+
+.container {
+  background-color: #ebf6f5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container h1 {
+  margin-left: 30px;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: last baseline;
+}
+
+ul li {
+  list-style: none;
+}

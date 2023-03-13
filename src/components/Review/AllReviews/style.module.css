@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: flex-end;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.usernameDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleRate,
+.countryDate,
+.body {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  align-items: center;
+}
+
+
+.titleBtn {
+  text-decoration: none;
+  color: #18b9b4;
+}
+
+.strong {
+  font-size: 16px;
+  color: #b484a8;
+}
+
+/* img {
+  width: 160px
+} */
+
+.body {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
