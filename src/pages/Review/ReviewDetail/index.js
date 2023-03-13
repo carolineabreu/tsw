@@ -55,13 +55,13 @@ export function ReviewDetail() {
     let likeReview;
     if (loggedInUser) {
       likeReview = review.likedBy.filter((id) => id.user.id === loggedInUser.user.id);
+      if (likeReview.length) {
+        setLikeBtn(false);
+      } else {
+        setLikeBtn(true);
+      }
     }
 
-    if (likeReview.length) {
-      setLikeBtn(false);
-    } else {
-      setLikeBtn(true);
-    }
   }, [review]);
 
   const { loggedInUser } = useContext(AuthContext);
