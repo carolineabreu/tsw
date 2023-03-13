@@ -1,4 +1,4 @@
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import { IconButton, Popover } from "@mui/material";
 import { useState } from 'react';
 
@@ -21,7 +21,7 @@ export function BasicPopover() {
     <div>
       {/* <Button aria-describedby={id} variant="contained" onClick={handleClick}> */}
       <IconButton aria-label="thumbUp" size="large" onClick={handleClick}>
-        <ThumbUpIcon color='secondary' fontSize="inherit" />
+        <ThumbUpOffAltIcon color='secondary' fontSize="inherit" />
       </IconButton>
       {/* </Button> */}
 

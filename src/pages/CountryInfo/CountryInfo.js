@@ -1,11 +1,13 @@
 import { Box, Carousel, Image } from "grommet";
-import { CalendarBlank, Coins, Thermometer, Users } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { CalendarBlank, Coins, Heart, Thermometer, Users } from "phosphor-react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
+import { AuthContext } from "../../contexts/authContext";
 import style from "./CountryInfo.module.css";
 
-export function CountryInfo({ countries }) {
+
+export function CountryInfo() {
   let { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [country, setCountry] = useState({
@@ -21,8 +23,13 @@ export function CountryInfo({ countries }) {
     whenToGo: "",
     facts: [],
     activities: [],
-    topCities: []
+    topCities: [],
+    savedBy: []
   });
+  const [savedBtn, setSavedBtn] = useState(false);
+
+  const { loggedInUser } = useContext(AuthContext);
+  console.log(loggedInUser);
 
   useEffect(() => {
     async function fetchCountry() {
@@ -39,12 +46,48 @@ export function CountryInfo({ countries }) {
     fetchCountry();
   }, [id]);
 
+  useEffect(() => {
+    let saveCountry;
+    if (loggedInUser) {
+      saveCountry = country.savedBy.filter((id) => id.user.id === loggedInUser.user.id);
+      if (saveCountry.length) {
+        setSavedBtn(true);
+      } else {
+        setSavedBtn(false);
+      }
+    }
+
+  }, [country]);
+
+  async function handleSave(e) {
+    e.preventDefault();
+    try {
+      await api.patch(`/country/${id}/save`);
+
+      setSavedBtn(!savedBtn);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <div className={style.all}>
       {!isLoading ? (
         <div className={style.container}>
           <div>
-            <h1 className={style.title}>{country.name}</h1>
+            <div className={style.titleIcon}>
+              <h1 className={style.title}>{country.name}</h1>
+              {loggedInUser !== null ? (
+                !savedBtn ? (
+                  <button onClick={handleSave} style={{ backgroundColor: "transparent", padding: "0", cursor: "pointer" }}>
+                    <Heart color="#b484a8" size={32} />
+                  </button>
+                ) : <button onClick={handleSave} style={{ backgroundColor: "transparent", padding: "0", cursor: "pointer" }}><Heart size={32} color="#b484a8" weight="fill" /></button>
+              ) : <button disabled={true} onClick={handleSave} style={{ backgroundColor: "transparent", padding: "0", cursor: "none" }}>
+                <Heart color="#b484a8" size={32} />
+              </button>}
+
+            </div>
             <div className={style.cover}>
               <Box height="large" width="xlarge" alignSelf="center">
                 <Carousel wrap play={5000} fill >

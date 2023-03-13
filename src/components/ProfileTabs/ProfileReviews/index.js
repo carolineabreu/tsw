@@ -46,7 +46,11 @@ export function ProfileReviews() {
                     </Link>{" "}
                     <span>{format(new Date(currentReview.date), 'dd/MM/yyyy')}</span>
                   </div>
-                  <p>{currentReview.body.slice(0, 90)}...</p>
+                  {currentReview.body.length > 90 ? (
+                    <p>{currentReview.body.slice(0, 90)}
+                      <Link className={style.titleBtn} to={`/review/${currentReview.id}`}><b className={style.strong}>...read more</b></Link>
+                    </p>
+                  ) : <p>{currentReview.body}</p>}
                 </Card>
               </Box>
             );
