@@ -1,10 +1,11 @@
 import { Box, Card, CircularProgress } from "@mui/material";
+import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
 import style from "./style.module.css";
 
-export function AllReviews() {
+export function ProfileReviews() {
   const [reviews, setReviews] = useState({
     author: {
       username: ""
@@ -37,22 +38,15 @@ export function AllReviews() {
         reviews.length ? (
           reviews.map((currentReview) => {
             return (
-              <Box key={currentReview.id} sx={{ minWidth: 275 }} >
-                <Card variant="outlined" style={{ borderRadius: "16px" }} className={style.card}>
-                  {/* <div>
-                    <span>@{currentReview.author.username}</span> {" "}
-                    <span className="text-sm text-gray-600 flex items-center">{differenceInDays(
-                      new Date(Date.now()),
-                      new Date(currentReview.createdAt)
-                    )}{" "} days ago</span>
-                  </div> */}
+              <Box key={currentReview.id} sx={{ width: 300 }} >
+                <Card variant="outlined" sx={{ height: 200 }} style={{ borderRadius: "16px" }} className={style.card}>
                   <div className={style.title}>
-                    <Link to="" className={style.titleBtn}>
+                    <Link to={`/review/${currentReview.id}`} className={style.titleBtn}>
                       <span>{currentReview.title}</span>
                     </Link>{" "}
-                    <span>{currentReview.date}</span>
+                    <span>{format(new Date(currentReview.date), 'dd/MM/yyyy')}</span>
                   </div>
-                  <p>{currentReview.body}</p>
+                  <p>{currentReview.body.slice(0, 90)}...</p>
                 </Card>
               </Box>
             );
