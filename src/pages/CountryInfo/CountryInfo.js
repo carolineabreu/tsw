@@ -1,181 +1,134 @@
+import { Box, Carousel, Image } from "grommet";
+import { CalendarBlank, Coins, Thermometer, Users } from "phosphor-react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { api } from "../../api/api";
 import style from "./CountryInfo.module.css";
-import { Carousel, Image } from "grommet";
-import { Box, Card, CardBody, Text } from "grommet";
-// import axios from "axios";
-// import { useEffect, useState, Link } from "react";
 
 export function CountryInfo({ countries }) {
   let { id } = useParams();
-  const country = countries.filter((current) => {
-    return current.id === id;
+  const [isLoading, setIsLoading] = useState(true);
+  const [country, setCountry] = useState({
+    name: "",
+    images: [],
+    about: "",
+    language: [],
+    capital: "",
+    continent: "",
+    currency: "",
+    population: "",
+    climate: "",
+    whenToGo: "",
+    facts: [],
+    activities: [],
+    topCities: []
   });
 
-  console.log(country);
+  useEffect(() => {
+    async function fetchCountry() {
+      try {
+        const response = await api.get(`/country/${id}`);
+
+        console.log(response.data);
+        setCountry(response.data);
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchCountry();
+  }, [id]);
 
   return (
-    <div className={style.container}>
-      <div>
-        <h1 className={style.title}>{country[0].name}</h1>
-        <div className={style.cover}>
-          <Carousel play={5000}>
-            {country[0].images.map((currentImage) => {
-              return (
-                <>
-                  <Image src={currentImage} alt={country[0].name} />
-                </>
-              );
-            })}
-          </Carousel>
-        </div>
-        <div className={style.info}>
-          <p className={style.infoAbout}>{country[0].infos.about}</p>
-
-          <div className={style.containerInfo}>
-            <div className={style.info1}>
-              <p>
-                <strong>Language: </strong>
-                {country[0].infos.language.map((currentLanguage) => {
-                  return <ul>{currentLanguage}</ul>;
-                })}
-              </p>
-              <p>
-                <strong>Capital: </strong>
-                {country[0].infos.capital}
-              </p>
-              <p>
-                <strong>Continent: </strong>
-                {country[0].infos.continent}
-              </p>
-            </div>
-            <div className={style.info2}>
-              <p>
-                <strong>Currency: </strong>
-                {country[0].infos.countryCurrency}
-              </p>
-              <p>
-                <strong>Population: </strong>
-                {country[0].infos.population}
-              </p>
-            </div>
-            <div className={style.info3}>
-              <p>
-                <strong>Climate: </strong>
-                {country[0].infos.climate}
-              </p>
-              <p>
-                <strong>When to go: </strong>
-                {country[0].tips.whenToGo}
-              </p>
-            </div>
-          </div>
-
-          <Card className={style.card} max-width="500px">
-            <CardBody>
-              <Box direction="row" gap="small">
-                <Box className={style.box}>
-                  <Text
-                    className={style.color}
-                    color="text-strong"
-                    size="large"
-                    weight="bold"
-                  >
-                    Facts:
-                  </Text>
-                  <Text color="text-strong">
-                    {country[0].infos.facts.map((currentFact) => {
-                      return (
-                        <ul className="cardUl">
-                          <li>{currentFact}</li>
-                        </ul>
-                      );
-                    })}
-                  </Text>
-                </Box>
+    <div className={style.all}>
+      {!isLoading ? (
+        <div className={style.container}>
+          <div>
+            <h1 className={style.title}>{country.name}</h1>
+            <div className={style.cover}>
+              <Box height="large" width="xlarge" alignSelf="center">
+                <Carousel wrap play={5000} fill >
+                  {country.images.map((currentImage) => {
+                    return (
+                      <>
+                        <Image fit="cover" src={currentImage} alt={country.name} />
+                      </>
+                    );
+                  })}
+                </Carousel>
               </Box>
-            </CardBody>
-          </Card>
-
-          <div className={style.tips}>
-            <Card className={style.card2} max-width="250px">
-              <CardBody>
-                <Box direction="row" gap="small">
-                  <Box className={style.box}>
-                    <Text
-                      className={style.color}
-                      color="text-strong"
-                      size="large"
-                      weight="bold"
-                    >
-                      Best Cities*
-                    </Text>
-                    <Text color="text-strong">
-                      {country[0].tips.topCities.map((currentCity) => {
-                        return (
-                          <ul className="cardUl">
-                            <li>{currentCity}</li>
-                          </ul>
-                        );
-                      })}
-                    </Text>
-                  </Box>
-                </Box>
-              </CardBody>
-            </Card>
-
-            <Card className={style.card2} max-width="250px">
-              <CardBody>
-                <Box direction="row" gap="small">
-                  <Box className={style.box}>
-                    <Text
-                      className={style.color}
-                      color="text-strong"
-                      size="large"
-                      weight="bold"
-                    >
-                      Activities
-                    </Text>
-                    <Text color="text-strong">
-                      {country[0].tips.activities.map((currentActivity) => {
-                        return (
-                          <ul className="cardUl">
-                            <li>{currentActivity}</li>
-                          </ul>
-                        );
-                      })}
-                    </Text>
-                  </Box>
-                </Box>
-              </CardBody>
-            </Card>
+            </div>
           </div>
-        
-          <p>
+          <div className={style.containerBottom}>
+            <p className={style.about}>{country.about}</p>
+            <div className={style.box1}>
+              <p><span>Language:</span> {country.language.join(", ")}</p>
+              <p><span>Capital:</span> {country.capital}</p>
+              <p><span>Continent:</span> {country.continent}</p>
+            </div>
+            <div className={style.box2}>
+              <div className={style.infoIcons}>
+                <Coins size={24} />
+                <p className={style.box2Title}>CURRENCY</p>
+                <p className={style.box2Body}>{country.currency}</p>
+              </div>
+              <div className={style.infoIcons}>
+                <Users size={24} />
+                <p className={style.box2Title}>POPULATION</p>
+                <p className={style.box2Body}>{country.population}</p>
+              </div>
+              <div className={style.infoIcons}>
+                <Thermometer size={24} />
+                <p className={style.box2Title}>CLIMATE</p>
+                <p className={style.box2Body}> {country.climate}</p>
+              </div>
+              <div className={style.infoIcons}>
+                <CalendarBlank size={24} />
+                <p className={style.box2Title}>WHEN TO GO</p>
+                <p className={style.box2Body}>{country.whenToGo}</p>
+              </div>
+            </div>
+            <div className={style.facts}>
+              <ul>Facts</ul>
+              <div className={style.factsList}>
+                {country.facts.map((currentFact) => {
+                  return (
+                    <li key={currentFact}>{currentFact}</li>
+
+                  );
+                })}
+              </div>
+            </div>
+            <div className={style.box3}>
+              <div className={style.cities}>
+                <ul>Best Cities*</ul>
+                <div className={style.citiesList}>
+                  {country.topCities.map((currentCity) => {
+                    return (
+                      <li key={currentCity}>{currentCity}</li>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className={style.activities}>
+                <ul>Activities</ul>
+                <div className={style.activitiesList}>
+                  {country.activities.map((currentActivity) => {
+                    return (
+                      <li key={currentActivity}>{currentActivity}</li>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className={style.footer}>
             *Score based on <a href="https://geosureglobal.com/">GeoSure</a>{" "}
             Women's Safety.
           </p>
         </div>
-      </div>
-      {/* <div>
-        {comments.map((currentComment) => {
-          if (
-            currentComment.title.toLowerCase() === country[0].name.toLowerCase()
-          ) {
-            return (
-              <div>
-                <Link to={`/${currentComment._id}`}>
-                  <h2>{currentComment.title}</h2>
-                  <img src={currentComment.image} alt={currentComment.name} />
-                  <p>{currentComment.ranking}</p>
-                  <p>{currentComment.description}</p>
-                  <p>{currentComment.date}</p>
-                  <p>{currentComment.name}</p>
-                </Link>
-              </div>
-            );
-          }
-        })}
-      </div> */}
+      ) : <p>loading</p>
+      }
     </div>
   );
 }
