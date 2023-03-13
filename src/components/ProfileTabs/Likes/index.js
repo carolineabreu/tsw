@@ -32,7 +32,7 @@ export function Likes() {
   }, []);
 
   return (
-    <div >
+    <div className={style.container}>
       {!isLoading ? (
         likes.likes.length ? (
           likes.likes.map((currentLike) => {
@@ -45,7 +45,11 @@ export function Likes() {
                       <span>{currentLike.review.title}</span>
                     </Link>
                   </div>
-                  <p>{currentLike.review.body.slice(0, 90)}...</p>
+                  {currentLike.review.body.length > 90 ? (
+                    <p>{currentLike.review.body.slice(0, 90)}
+                      <Link className={style.titleBtn} to={`/review/${currentLike.review.id}`}><b className={style.strong}>...read more</b></Link>
+                    </p>
+                  ) : <p>{currentLike.review.body}</p>}
                 </Card>
               </Box>
             );
