@@ -18,10 +18,12 @@ export function Profile() {
     username: ""
   });
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [reload, setReload] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchUser() {
@@ -36,7 +38,7 @@ export function Profile() {
       }
     }
     fetchUser();
-  }, []);
+  }, [reload]);
 
   const { loggedInUser } = useContext(AuthContext);
 
@@ -58,7 +60,7 @@ export function Profile() {
               <Link to="/profile">
                 <button onClick={handleOpen}>Edit</button>
               </Link>
-              <ModalEdit form={form} setForm={setForm} open={open} handleClose={handleClose} />
+              <ModalEdit form={form} setForm={setForm} open={open} handleClose={handleClose} reload={reload} setReload={setReload} setOpen={setOpen} />
               <button onClick={handleLogout}>Logout</button>
             </div>
           </div>
