@@ -1,5 +1,4 @@
 import { Box, Modal } from "@mui/material";
-import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../api/api";
@@ -20,20 +19,7 @@ const styles = {
 
 export function ModalEdit(props) {
   const navigate = useNavigate();
-  const [user, setUser] = useState([]);
 
-  useEffect(() => {
-    async function fetchUser() {
-      try {
-        const response = await api.get("/user/byUsername");
-
-        setUser(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    fetchUser();
-  }, []);
 
   function handleChange(e) {
     props.setForm({ ...props.form, [e.target.name]: e.target.value });
@@ -43,9 +29,10 @@ export function ModalEdit(props) {
     e.preventDefault();
 
     try {
-      const response = await api.patch("/user/edit-profile", props.form);
+      await api.patch("/user/edit-profile", props.form);
 
-      console.log(response);
+      props.setOpen(false);
+      props.setReload(!props.reload);
     } catch (error) {
       toast("Username already exist.");
       console.log(error);
