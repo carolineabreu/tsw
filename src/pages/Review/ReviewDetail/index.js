@@ -54,11 +54,12 @@ export function ReviewDetail() {
   useEffect(() => {
     let likeReview;
     if (loggedInUser) {
-      likeReview = review.likedBy.filter((id) => id.user.id === loggedInUser.user.id);
+      likeReview = review.likedBy.filter((id) => id.userId === loggedInUser.user.id);
+      console.log(likeReview);
       if (likeReview.length) {
-        setLikeBtn(false);
-      } else {
         setLikeBtn(true);
+      } else {
+        setLikeBtn(false);
       }
     }
 
@@ -133,10 +134,10 @@ export function ReviewDetail() {
                 </div>
               ) : !likeBtn ? (
                 <IconButton onClick={handleLike} aria-label="thumbUp" size="large">
-                  <ThumbUpAltIcon color='secondary' fontSize="inherit" />
+                  <ThumbUpOffAltIcon color='secondary' fontSize="inherit" />
                 </IconButton>
               ) : <IconButton onClick={handleLike} aria-label="thumbUp" size="large">
-                <ThumbUpOffAltIcon color='secondary' fontSize="inherit" />
+                <ThumbUpAltIcon color='secondary' fontSize="inherit" />
               </IconButton>
             ) : <BasicPopover />}
           </div>
