@@ -15,6 +15,17 @@
   padding-top: 40px;
 }
 
+.titleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+}
+
 .title {
   font-size: 3.5rem;
   padding-bottom: 20px;
